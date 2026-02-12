@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{adjustbox}
+\usepackage{makecell} % Pour simplifier les cellules multilignes
+
+% Caption ULrapport
+\DeclareCaptionLabelSeparator{as-Babel-french}{\space\textendash\space}
+\captionsetup{margin=0.1\textwidth,labelsep=as-Babel-french}
+\captionsetup[table]{position=top}
+
+% Dimensions ULrapport
+\geometry{letterpaper,
+          centering,
+          hmargin={2.5cm,2.5cm},
+          vmargin={2.5cm,2.5cm},
+          heightrounded,
+          includehead}
+
+\begin{document}
+
+\begin{table}[h!]
+    \centering
+    \caption{Tableau du cahier des charges.}
+    \label{tableau-cahier-des-charges}
+
+    \begin{adjustbox}{max width=\textwidth}
+    \begin{tabular}{|p{11.3cm}|c|c|c|c|}
+        \hline
+        Critères d'évaluation 
+        & Pond.
+        & Barème
+        & Min.
+        & Max. \\ 
+        \hline
+
+        % 4.1
+        \makecell[l]{%
+            \textcolor{red}{4.1} \textbf{Automatiser le système}\\
+            \textcolor{red}{4.1.1} Maximiser la prise des données\\
+            \textcolor{red}{4.1.2} Assurer une interaction à distance fonctionnelle\\
+            \textcolor{red}{4.1.3} Détecter automatiquement les mouvements\\
+            \textcolor{red}{4.1.4} Maximiser l'autonomie de la source d'énergie}
+        &
+        \makecell{30 \%\\10 \%\\10 \%\\6 \%\\4 \%}
+        & 
+        & 
+        & 
+        \\ \hline
+
+        % 4.2
+        \makecell[l]{%
+            \textcolor{red}{4.2} \textbf{Être robuste et simple à entretenir}\\
+            \textcolor{red}{4.2.1} Simplifier l'installation du système\\
+            \textcolor{red}{4.2.2} Minimiser les risques de malfonction}
+        &
+        \makecell{25 \%\\X \%\\X \%}
+        & 
+        & 
+        & 
+        \\ \hline
+
+        % 4.3
+        \makecell[l]{%
+            \textcolor{red}{4.3} \textbf{Mesurer des données de qualité}\\
+            \textcolor{red}{4.3.1} Optimiser la résolution et le débit d'images de la caméra\\
+            \textcolor{red}{4.3.2} Éclairer adéquatement la boîte\\
+            \textcolor{red}{4.3.3} Adapter le champ de vision de la caméra à la boîte}
+        &
+        \makecell{25 \%\\10 \%\\8 \%\\7 \%}
+        & 
+        & 
+        & 
+        \\ \hline
+
+        % 4.4
+        \makecell[l]{%
+            \textcolor{red}{4.4} \textbf{Réduire les coûts}\\
+            \textcolor{red}{4.4.1} Minimiser le coût de l'équipement\\
+            \textcolor{red}{4.4.2} Minimiser le coût du déplacement et d'installation}
+        &
+        \makecell{10 \%\\X \%\\X \%}
+        & 
+        & 
+        & 
+        \\ \hline
+
+        % 4.5
+        \makecell[l]{%
+            \textcolor{red}{4.5} \textbf{Assurer le développement durable}\\
+            \textcolor{red}{4.5.1} Assurer l'EDI\\
+            \textcolor{red}{4.5.2} Assurer une mesure passive (sans piège)}
+        &
+        \makecell{10 \%\\5 \%\\5 \%}
+        & 
+        & 
+        & 
+        \\ \hline
+    \end{tabular}
+    \end{adjustbox}
+\end{table}
+
+\end{document}
