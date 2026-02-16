@@ -1,0 +1,97 @@
+%!TEX encoding = IsoLatin
+
+%
+% Exemple de rapport
+% par Pierre Tremblay, Universite Laval
+% modifié par Christian Gagne, Universite Laval
+% 14/01/2011 - version 1.3
+% modifié par Robert Bergevin, Université Laval
+% 24/11/2011
+% modifié par Jean-Yves Chouinard, Université Laval
+% 11/01/2016
+% modifié par Jean-Yves Chouinard, Université Laval
+% 04/01/2017
+%
+
+%
+% Modele d'organisation d'un projet LaTeX 
+% rapport/      dossier racine et fichier principal
+% rapport/fig   fichiers des figures
+% rapport/tex   autres fichiers .tex
+%
+
+% ** Preambule **
+%
+% Ajouter les options au besoin :
+%    - "ULlof" pour inclure la liste des figures, requis si "\begin{figure}" utilise
+%    - "ULlot" pour inclure la liste des tableaux, requis si "\begin{table}" utilise
+%
+%\documentclass[12pt,ULlof,ULlot]{ULrapport}
+\documentclass[12pt]{ULrapport}
+
+% Chargement des packages supplementaires (si absent de la classe)
+\usepackage[utf8]{inputenc}   % pour lire les accents directement
+\usepackage[T1]{fontenc}      % pour avoir les accents dans le PDF
+\usepackage[french]{babel} 
+\usepackage[autolanguage]{numprint}
+\usepackage{icomma}
+%\usepackage[options]{nom_du_package}
+
+% Definition d'une commande pour presenter des cellules multilignes dans un tableau
+\newcommand{\cellulemultiligne}[1]{\begin{tabular}{@{}c@{}}#1\end{tabular}}
+
+% Definition de colonnes en mode paragraphe avec alignement ajustable
+% Cette definition requiert le chargement du package "array"
+%    - alignement horizontal, parametre #1 : - \raggedright (aligne a gauche)
+%                                            - \centering (centre)
+%                                            - \raggedleft (aligne a droite)
+%    - alignement vertical, parametre #2 : - p (aligne en haut)
+%                                          - m (centre)
+%                                          - b (aligne en bas)
+%    - largeur, parametre #3 : longueur
+\newcolumntype{Z}[3]{>{#1\hspace{0pt}\arraybackslash}#2{#3}}
+
+% Definitions des parametres de la page titre
+\TitreProjet{Grand Nord : Syst\`eme autonome fixe pour l'\'echantillonnage de la faune arctique}                         % Titre du projet
+\TitreRapport{Rapport de projet -- version 0}                       % Titre du rapport
+\Destinataire{Robert Bergevin, Luc Lamontagne et Simon Thibault}         % Nom(s) du destinataire
+\NumeroEquipe{27}                                     % Numero de l'equipe
+\NomEquipe{NordiQc}                               % Nom de l'equipe
+\TableauMembres{%                                     % Tableau des membres de l'equipe
+   537\,390\,129    & Isaac Corriveau        & V\'erification du rapport \\\hline
+   537\,201\,790    & Tristan Gourrand       & Organisation \\\hline
+   537\,389\,801    & Emeric Guimond         & Proc\`es-verbaux \\\hline
+   537\,380\,856    & Samia Hins             & Direction \\\hline
+   537\,130\,575    & Armand Lecombe         & Production du rapport \\\hline
+   537\,387\,624    & Yoan L\'evesque          & Planification \\\hline
+   537\,376\,833    & Arianne Poulin         & Ordre du jour \\\hline
+   537\,354\,173    & Hugo Vachon-Veronneau  & Remise des livrables \\\hline
+}
+\DateRemise{29 janvier 2026}                           % Date de remis
+
+
+% Contenu de l'historique des versions
+\HistoriqueVersions{%                        % version & date & description \\\hline
+         & 22 janvier 2026 & Cr\'eation du document \\\hline
+   0   & 23 janvier 2026 & Ajout de l'introduction et de la description\\\hline
+   0   & 29 janvier 2026 & Correction de l'introduction et de la description\\\hline
+}
+
+
+% Corps du document
+
+\begin{document}
+
+%   Chapitres
+\input{tex/Chapitre1}
+\input{tex/Chapitre2}
+\input{tex/Chapitre3}
+\input{tex/Chapitre4}
+
+%   Annexes
+%\appendix
+%\input{tex/liste_sig_acr}
+
+\end{document}
+% Fin du document
+
