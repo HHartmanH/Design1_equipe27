@@ -1,1 +1,101 @@
 \chapter{Cahier des charges}
+Ce chapitre décrit la démarche utilisée pour élaborer le cahier des charges et présente les barèmes associés à chacun des objectifs. Il se conclut par un tableau synthèse du cahier des charges Y ainsi que par la maison de la qualité Z. 
+
+\section{Automatiser le système}
+
+L'automatisation est essentielle, car elle permet au système de fonctionner en continu, 24 heures sur 24, tout en réduisant considérablement les risques d'erreurs humaines et en assurant une performance plus constante et fiable. C'est pourquoi cet objectif a une pondération de 30\%.
+
+\subsection{Maximiser la prise des données}
+
+L'automatisation du système est essentielle afin de maximiser la collecte des données sur l'activité des lemmings. En raison de la région difficilement accessible et des conditions climatiques extrêmes du Grand Nord, une collecte manuelle serait irrégulière, coûteuse et peu fiable. Un système automatisé permet d'enregistrer les événements en continu et d'assurer une prise de données 24 heures sur 24 tout en limitant les erreurs humaines et en renforçant la rigueur scientifique. C'est pourquoi une pondération de 10\% est associée à ce sous-objectif. Ce critère sera évalué selon la fréquence d'acquisition des données et selon la qualité minimale des données récoltées. Selon l'atteinte de ces deux critères, une note de 0 à 1 sera attribuée.  
+
+\subsection{Assurer une interaction à distance fonctionnelle}
+
+En raison de l'éloignement géographique du site d'installation, il est essentiel que le système permette une interaction à distance fonctionnelle afin de consulter l'état du système et d'accéder aux données collectées sans intervention sur le terrain. Une pondération de 10\% est associée à ce sous-objectif. Une valeur minimale de 0 correspond à une interaction inexistante ou non fiable, une valeur de 0,5 à une interaction partielle ou intermittente, et une valeur de 1 à une interaction complète, fiable et continue. Ce critère sera évalué en fonction de la portée du lien de transmission et de l'accessibilité des informations depuis la centrale. 
+
+\subsection{Détecter automatiquement les mouvements}
+
+Afin de filmer des vidéos de manière autonome et efficace, il est essentiel que le système capte automatiquement l'activité à l'intérieur de la boîte. C'est pourquoi une pondération de 6\% est associée à ce sous-objectif. Le barème est évalué en fonction du temps pris entre chaque capture (t), où la cote minimale est attribuée à une durée de 60 minutes entre les captures et la cote maximale à une durée de zéro minute entre les captures, selon la formule : 
+\[
+\frac{60-t}{60}
+\]
+
+\subsection{Maximiser l'autonomie de la source d'énergie}
+
+Le client exige une autonomie du système d'une durée minimale d'un an. Une source d'énergie est donc nécessaire afin d'alimenter le système pendant cette période. La pondération associée à ce sous-objectif est de 4\%. Le barème est évalué en fonction du temps d'autonomie (t), où la cote minimale est attribuée à une durée de 12 mois d'autonomie et la cote maximale à une durée de 24 mois d'autonomie, selon la formule :
+\[
+\frac{t-12}{12}
+\]
+
+\section{Être robuste et simple à entretenir}
+
+La robustesse et la simplicité sont des éléments importants pour le projet afin d'assurer un déploiement rapide et une prise de données continue sans malfonction. La pondération attribuée est donc de 25\%. 
+
+\subsection{Simplifier l'installation du système}
+
+Afin que l'installation soit réalisable dans les délais impartis, il est essentiel que l'installation du système soit rapide et efficace. Le système doit pouvoir être transporté et installé par une équipe de deux personnes. Par conséquent, le système ne peut pas être trop lourd ou volumineux. Puisque l'installation se fait sur place, le système doit être facile à assembler. La pondération attribuée est à discuter plus tard. Le poids maximal est de 70 kg et le volume désiré est d'environ 1 m\textsuperscript{3}. L'évaluation du critère se fera par la formule où m et v représentent la masse et le volume du système. 
+\[
+\frac{v(m - 70)}{50}
+\]
+
+\subsection{Minimiser les risques de malfonction}
+
+Le système doit pouvoir opérer automatiquement sans entretien régulier. S'assurer que les composantes électriques et électroniques fonctionnent pendant la durée de l'opération est un aspect important au projet. Il est donc essentiel de prendre des mesures pour réduire le risque de malfonction. Les différentes composantes électriques et électroniques doivent être bien isolées des intempéries et de la faune qui pourrait endommager le système. La pondération attribuée est à discuter plus tard. Si le système fonctionne sans problème, la note de 1 sera attribuée, 0,5 si un problème survient mais peut être réparé, et 0 si la défaillance est impossible à réparer.
+
+\section{Mesurer des données de qualité}
+
+Le système doit produire des données de qualité, car les images de la faune arctique ont pour but d'être étudiées par le client. La pondération de ce critère est donc de 25\%. 
+
+\subsection{Optimiser la résolution et le débit d'images de la caméra}
+
+Une caméra avec une bonne résolution produit des images moins pixelisées qui peuvent être agrandies numériquement sans diminuer la qualité de l'image. C'est nécessaire, car le client nécessite une caméra d'un minimum de 720p. 
+
+Une caméra avec un bon nombre d'images par seconde permet d'avoir beaucoup d'images dans un court laps de temps comme dans notre situation où nous ne contrôlons pas les déplacements de la faune arctique. Une caméra avec un minimum de 15 ips (images par seconde) est nécessaire pour le client. L'évaluation de ce critère se fera à l'aide de ce barème où i et p sont respectivement le nombre d'images par seconde et le nombre de pixels total (en millions) selon le modèle standard. 
+\[
+\left( \frac{i - 15}{225} \right) \cdot \left( \frac{p - 1}{7} \right)
+\]
+La caméra doit avoir un minimum de 720p et 15 ips et le maximum réaliste pour ce projet serait une caméra de 4K et 240 ips. Ce critère est assez important, donc son poids est de 10\%. 
+
+\subsection{Éclairer adéquatement la boîte}
+
+Un éclairage adapté à la caméra est nécessaire, car une caméra est inutile sans de la lumière environnante qui réfléchit sur l'objet pour être captée par la caméra. Ainsi, l'éclairage change aussi selon le type de lumière que la caméra capte. L'évaluation de ce critère dépend du type du capteur des systèmes évalués. Nous considérons un éclairage lumineux adéquat pour une boîte de 1 m\textsuperscript{3} comme étant de 100 lux. L'évaluation se fera à l'aide de ce barème où E est l'éclairage lumineux de la source de lumière en lux.   
+
+Ce critère a un poids de 8\%, car sans l'éclairage, nous ne pouvons pas capter d'images avec la caméra.
+
+\subsection{Adapter le champ de vision de la caméra à la boîte}
+
+Afin d'avoir le maximum d'images contenant des animaux de la faune arctique, nous devons adapter la position de la caméra pour avoir accès à l'entrée et la sortie autour de ces derniers dans le champ de vision. Pour évaluer ce critère, nous utiliserons ce barème où f est la longueur focale de la lentille utilisée, h' est la hauteur du capteur utilisé : 
+
+Le minimum du champ de vision sera 0 degré et le maximum est 90 degrés, donc le ratio va de 0 à 1. Nous devons garantir que la caméra a un champ de vision adéquat pour le projet, donc le critère a un poids de 7\%. 
+
+\section{Réduire les coûts}
+
+Bien qu'aucune estimation de budget n'ait été spécifiée par le client, une grande importance est donnée au coût du projet. Il faut que toutes les dépenses soient essentielles et minimisées, tout en respectant les autres critères et en assurant une qualité respectable. Puisque le client s'intéresse peu à l'esthétique du projet, seul le matériel essentiel pour le fonctionnement du système sera nécessaire. 
+
+\subsection{Minimiser le coût de l'équipement}
+
+L'équipement nécessaire consiste en un capteur de faune, un appareil de prise de vidéo, un système de stockage, un système de communication à distance et une source d'énergie (stockage et/ou génération). Le coût peut varier selon la qualité et la robustesse de chaque composant mentionné (p. ex., la capacité de stockage et la présence de redondance de type RAID). 
+
+Pour comparer les options, une cote normalisée de 0 à 1 est attribuée à chaque solution en fonction de son coût total d'équipement. Le coût total des composants est estimé entre 800 et 5000 \$. Le barème sera alors défini comme suit : 
+\[
+\frac{v(5000 - c)}{4200}
+\]
+
+
+\subsection{Minimiser le coût du déplacement et de l'installation}
+
+Le système sera installé à plus de 2000 km d'une centrale, dans l'Arctique. Le client spécifie que le système devrait pouvoir être installé par seulement deux personnes sans compétence en ingénierie. Le système devrait donc être facilement transportable et trivial à installer une fois rendu sur le site. 
+
+\section{Assurer le développement durable}
+
+S'assurer que le projet respecte les principes du développement durable constitue une part non négligeable lors de la mise en place du projet. Ce qui justifie la pondération de 10\%. 
+
+\subsection{Assurer l'EDI}
+
+Dans le cadre de ce projet, l'équité, la diversité et l'inclusion sont abordées sous l'angle de l'éthique et de la responsabilité environnementale. Le système devra permettre la collecte de données de manière équitable et respectueuse, sans perturber la faune ni introduire de biais dans les observations. L'approche retenue privilégie une mesure passive et non intrusive afin d'assurer le respect des sujets d'étude et de l'écosystème. La pondération est de 5\%. On attribuera 2 points pour l'équité, pour la diversité et pour l'inclusion : 0/2 le critère n'est pas respecté, 1/2 le critère est respecté mais laisse place à amélioration, et 2/2 le critère est respecté entièrement. Ce qui porte l'évaluation de ce critère à 6/6. 
+
+\subsection{Assurer une mesure passive (sans piège)}
+
+Le système doit permettre d'effectuer les observations sans venir troubler l'environnement de l'animal ; il doit pouvoir récupérer toutes les informations nécessaires sans pour autant le retenir contre son gré. Le sujet d'étude doit rester libre de ses mouvements et ne pas être perturbé dans son train de vie. La pondération de ce critère est de 5\%. L'évaluation se divisera en 2 catégories pesant 2 points chacune. La première catégorie sera le respect de la liberté de mouvement de l'animal, la seconde sera l'impact sur la vie de l'animal après son passage dans le dispositif. La note de 0/2 sera attribuée pour une mesure qui marque l'animal et l'emprisonne, une note de 1/2 sera attribuée à une mesure qui n'est pas complètement optimale pour le sujet d'étude, et la note de 2/2 sera attribuée au système qui remplit pleinement les conditions des deux catégories, portant la note finale de ce critère à 4/4. 
+
+\end{document}
