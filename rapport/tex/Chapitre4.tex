@@ -159,25 +159,23 @@ d’images avec la caméra.
 
 \subsection{Adapter le champ de vision de la caméra à la boîte}
 
-Afin d’avoir le maximum d’images contenant des animaux de la faune arctique
-nous devons adapter la position de la caméra pour avoir accès à l’entrée et la
-sortie ainsi qu’à la zone autour de ces dernières dans le champ de vision de la
-caméra. Pour évaluer ce critère, nous utiliserons ce barème où f est la
-longueur focale de la lentille utilisée et h’ est la hauteur du capteur
-utilisée :
+Afin de maximiser le nombre d’images contenant des animaux de la faune
+arctique, la position de la caméra doit être ajustée de manière à inclure dans
+son champ de vision l’entrée, la sortie et la zone environnante. L’évaluation
+de ce critère repose sur le barème suivant, où f représente la longueur focale
+de la lentille et h’ la hauteur du capteur :
 
 \[
     \frac{\arctan\!\left(\frac{h'}{2f}\right)}{45}
 \]
 
-La fonction arc tangente est utilisée pour évaluer ce critère, car le champ de
-vision (FOV) est directement l’arc tangente de la hauteur de l’image et de la
-longueur focale, le barème correspond au FOV de la caméra divisée par le FOV
-maximal.
+La fonction arc tangente est utilisée puisque le champ de vision (FOV) dépend
+directement du rapport entre la hauteur de l’image et la longueur focale. Le
+barème correspond ainsi au FOV de la caméra normalisé par le FOV maximal.
 
-Le minimum du champ de vision sera 0 degré et le maximum sera de 90 degrés,
-donc la cote va de 0 à 1. Nous devons garantir que la caméra a un champ de
-vision adéquat pour le projet, donc le critère a un poids de 7\%.
+Le champ de vision minimal est fixé à 0 degré et le maximal à 90 degrés, ce qui
+produit une cote variant de 0 à 1. Comme un champ de vision adéquat est
+essentiel au bon fonctionnement du système, ce critère est pondéré à 7\%.
 
 \section{Réduire les coûts}
 
