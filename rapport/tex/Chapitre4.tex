@@ -186,8 +186,8 @@ grande importance est quand même donnée au coût du projet. Il faut alors que
 toutes les dépenses soient essentielles et minimisées, tout en respectant les
 autres critères et en assurant une qualité respectable. Puisque le client
 s’intéresse peu à l’esthétique du projet, seul le matériel essentiel pour le
-fonctionnement du système sera nécessaire. La pondération de ce critère est de
-20\%.
+fonctionnement du système sera nécessaire. Ainsi, la pondération de ce critère
+est de 20\%.
 
 \subsection{Minimiser le coût de l'équipement}
 
@@ -195,7 +195,8 @@ L’équipement nécessaire consiste en un capteur de faune, en un appareil de
 prise de vidéo, en un système de stockage, un système de communication à
 distance et en une source d’énergie (stockage et/ou génération). Le coût peut
 varier selon la qualité et la robustesse de chaque composant mentionné (p. ex.,
-la capacité de stockage et la présence de redondance de type RAID).
+la capacité de stockage et la présence de redondance de type RAID). La
+pondération attribuée à ce critère est donc de 5\%.
 
 Pour comparer les options, une cote normalisée de 0 à 1 est attribuée à chaque
 solution en fonction de son coût total d’équipement. Le coût total des
@@ -210,14 +211,16 @@ Où c est le coût de l’équipement utilisé pour le concept.
 
 \subsection{Minimiser le coût du déplacement et de l’installation}
 
-Le système sera installé à plus de 2000 km d'une centrale, dans l’Arctique. Le
-client spécifie que le système devrait pouvoir être installé par seulement deux
-personnes sans compétence en ingénierie. Le système devrait alors être
-facilement transportable et trivial à installer une fois rendu sur le site. Le
-coût dépendra principalement de la facilité à transporter le système jusqu’au
-site. Si le système peut être transporté par un seul véhicule, on donne une
-cote de 1; s’il peut seulement être transporté par deux véhicules, on donne une
-cote de 0,5; sinon, une cote de 0 lui sera attribué pour ce critère.
+Le système sera installé à plus de 2000 km d’une centrale, dans l’Arctique. Le
+client précise que l’installation doit pouvoir être réalisée par seulement deux
+personnes ne possédant aucune compétence en ingénierie. Le système doit donc
+être facilement transportable et trivial à installer une fois sur le site. La
+pondération de ce critère est donc de 5\%.
+
+Le coût dépendra principalement de la facilité de transport jusqu’au lieu
+d’installation. Si le système peut être acheminé à l’aide d’un seul véhicule,
+une cote de 1 lui est attribuée. S’il nécessite deux véhicules, la cote sera de
+0,5. Dans tout autre cas, une cote de 0 sera attribuée pour ce critère.
 
 \section{Assurer le développement durable}
 
@@ -227,28 +230,29 @@ justifie la pondération de 10\%.
 
 \subsection{Assurer l'EDI}
 
-Dans le cadre de ce projet, l’équité, la diversité et l’inclusion sont abordées
-sous l’angle de l’éthique et de la responsabilité environnementale. Le système
-devra permettre la collecte de données de manière équitable et respectueuse,
-sans perturber la faune ni introduire de biais dans les observations.
-L’approche retenue privilégie une mesure passive et non intrusive afin
-d’assurer le respect des sujets d’étude et de l’écosystème. La pondération est
-de 5\%. On attribuera 2 points pour l’équité, pour la diversité et pour
-l’inclusion, 0/2 le critère n’est pas respecté, 1/2 le critère est respecté
-mais laisse place à amélioration et 2/2 le critère est respecté entièrement. Ce
-qui porte l’évaluation de ce critère à 6/6.
+Dans le cadre de ce projet, l’équité, la diversité et l’inclusion constituent
+des principes fondamentaux guidant la conception du système. L’objectif est de
+garantir une collecte de données équitable, respectueuse et exempte de biais,
+tout en préservant l’intégrité de la faune et de l’écosystème. L’approche
+retenue repose sur une mesure passive et non intrusive, de manière à respecter
+pleinement les sujets d’étude. La pondération de ce critère est de 5\%.
+L’évaluation de ce critère s’appuie sur trois dimensions, soit l’équité, la
+diversité et l’inclusion, chacune étant notée sur une échelle de 0 à 1, où 0
+correspond à un critère non respecté, 0,5 à un respect partiel et 1 à un
+respect complet. La note globale correspond à la moyenne des trois dimensions,
+ce qui assure une évaluation finale comprise entre 0 et 1.
 
 \subsection{Assurer une mesure passive (sans pièges)}
 
-Le système doit permettre d’effectuer les observations sans venir troubler
-l’environnement de l’animal, il doit pouvoir récupérer toutes les informations
-qui lui sont nécessaires sans pour autant le retenir contre son gré. Le sujet
-d’étude doit rester libre de ses mouvements et ne pas être perturbé dans son
-train de vie. La pondération de ce critère est de 5\%. L’évaluation se divisera
-en 2 catégories pesant 2 points chaque. La première catégorie sera le respect
-de la liberté de mouvement de l’animal, la seconde sera l’impact sur la vie de
-l’animal après son passage dans le dispositif. La note de 0/2 sera attribuée
-pour une mesure qui marque l’animal et l’emprisonne, une note de 1/2 sera
-attribuée à la mesure qui ne sera pas complètement optimale pour le sujet
-d’étude et la note de 2/2 sera attribuée au système qui remplit pleinement les
-conditions des deux catégories, portant la note finale de ce critère à 4/4.
+Le système doit permettre d’effectuer les observations sans perturber
+l’environnement de l’animal et doit être en mesure de recueillir les
+informations nécessaires sans jamais restreindre sa liberté. Le sujet d’étude
+doit pouvoir se déplacer librement et poursuivre son mode de vie habituel sans
+être influencé par le dispositif. La pondération de ce critère est de 5\%.
+L’évaluation de ce critère repose désormais sur deux aspects : le respect de la
+liberté de mouvement de l’animal et l’impact du dispositif sur sa vie après son
+passage. Chacun de ces aspects est évalué sur une échelle de 0 à 1, où 0
+correspond à une mesure intrusive ou contraignante, 0,5 à une solution
+partiellement satisfaisante et 1 à un système entièrement passif et non
+perturbateur. La note finale correspond à la moyenne des deux valeurs, ce qui
+garantit une évaluation globale directement comprise entre 0 et 1.
