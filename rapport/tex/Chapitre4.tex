@@ -2,6 +2,13 @@
 
 \input{tableaux/synthese_cahier_des_charges.tex}
 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/maison_de_la_qualite.png}
+    \caption{Maison de la qualité.}
+    \label{fig:maison_de_la_qualite}
+\end{figure}
+
 Ce chapitre décrit la démarche utilisée pour élaborer le cahier des charges et
 présente les barèmes associés à chacun des objectifs. Il se conclut par un
 tableau synthèse du cahier des charges Y ainsi que par la maison de la qualité
@@ -142,6 +149,10 @@ nous devons adapter la position de la caméra pour avoir accès à l'entrée et 
 sortie autour de ces derniers dans le champ de vision. Pour évaluer ce critère,
 nous utiliserons ce barème où f est la longueur focale de la lentille utilisée,
 h' est la hauteur du capteur utilisé :
+
+\[
+\frac{\arctan\!\left(\frac{h'}{2f}\right)}{45}
+\]
 
 Le minimum du champ de vision sera 0 degré et le maximum est 90 degrés, donc le
 ratio va de 0 à 1. Nous devons garantir que la caméra a un champ de vision
