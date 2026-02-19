@@ -1,10 +1,10 @@
 \begin{table}[h!]
     \centering
-    \caption{Tableau du cahier des charges.}
-    \label{tableau-cahier-des-charges}
+    \caption{Tableau synthèse du cahier des charges.}
+    \label{tableau-synthese-cahier-des-charges}
 
     \begin{adjustbox}{max width=\textwidth}
-    \begin{tabular}{|p{11.3cm}|c|c|c|c|}
+    \begin{tabular}{|p{12.5cm}|c|c|c|c|}
         \hline
         Critères d'évaluation 
         & Pond.
@@ -16,19 +16,19 @@
         % 4.1
         \makecell[l]{%
             \textcolor{red}{4.1} \textbf{Automatiser le système}\\
-            \textcolor{red}{4.1.1} Maximiser la prise des données\\
-            \textcolor{red}{4.1.2} Assurer une interaction à distance fonctionnelle\\
-            \textcolor{red}{4.1.3} Détecter automatiquement les mouvements\\
-            \textcolor{red}{4.1.4} Maximiser l'autonomie de la source d'énergie}
+            \textcolor{red}{4.1.1} Maximisation de la prise des données\\
+            \textcolor{red}{4.1.2} Garantie d'une interaction à distance fonctionnelle\\
+            \textcolor{red}{4.1.3} Détection automatique des mouvements\\
+            \textcolor{red}{4.1.4} Maximisation de l'autonomie de la source d'énergie}
         &
-        \makecell{30 \%\\10 \%\\10 \%\\6 \%\\4 \%}
+        \makecell{35 \%\\10 \%\\10 \%\\11 \%\\4 \%}
         &
         \makecell{%
         \\
         Barème \textcolor{red}{4.1.1}\\
         Barème \textcolor{red}{4.1.2}\\
-        $\frac{60 - t}{60}$ $t \in [0,60]$\\
-        $\frac{t-12}{12}$ $t \in [12,24]$}
+        $\frac{60 - t}{60}$ $t \in [0,60]$ minutes\\
+        $\frac{t-12}{12}$ $t \in [12,24]$ mois}
         &
         &
         \\ \hline
@@ -36,14 +36,14 @@
         % 4.2
         \makecell[l]{%
             \textcolor{red}{4.2} \textbf{Être robuste et simple à entretenir}\\
-            \textcolor{red}{4.2.1} Simplifier l'installation du système\\
-            \textcolor{red}{4.2.2} Minimiser les risques de malfonction}
+            \textcolor{red}{4.2.1} Simplification de l'installation du système\\
+            \textcolor{red}{4.2.2} Minimisation des risques de malfonction}
         &
-        \makecell{25 \%\\X \%\\X \%}
+        \makecell{20 \%\\5 \%\\15 \%}
         &
         \makecell{%
         \\
-        $\frac{v(m - 70)}{50}$ $m \in [x,y]$, $v \in [x,y]$\\
+        $\frac{v(m - 70)}{50}$ $m \in [5,70]$ kg, $v \in [1,2]$ $\text{m}^3$\\
         Barème \textcolor{red}{4.2.2}}
         &
         &
@@ -52,17 +52,17 @@
         % 4.3
         \makecell[l]{%
             \textcolor{red}{4.3} \textbf{Mesurer des données de qualité}\\
-            \textcolor{red}{4.3.1} Optimiser la résolution et le débit d'images de la caméra\\
-            \textcolor{red}{4.3.2} Éclairer adéquatement la boîte\\
-            \textcolor{red}{4.3.3} Adapter le champ de vision de la caméra à la boîte}
+            \textcolor{red}{4.3.1} Optimisation de la résolution et du débit d'images de la caméra\\
+            \textcolor{red}{4.3.2} Éclairage adéquat de la boîte\\
+            \textcolor{red}{4.3.3} Adaptation du champ de vision de la caméra à la boîte}
         &
         \makecell{25 \%\\10 \%\\8 \%\\7 \%}
         &
         \makecell{%
         \\
-        $\frac{(i - 15)(p - 1)}{1575}$ $i \in [x,y]$, $p \in [x,y]$\\
+        $\frac{(i - 15)(p - 1)}{1575}$ $i \in [15,240]$ ips, $p \in [1,9]$ mégapixels\\
         \\
-        $\frac{\arctan(\frac{h'}{2f})}{45}$ $f \in [x,y]$, $h' \in [x,y]$}
+        $\frac{\arctan(\frac{h'}{2f})}{45}$ $f \in [0,1]$ m, $h' \in [0,2]$ m}
         &
         &
         \\ \hline
@@ -70,14 +70,14 @@
         % 4.4
         \makecell[l]{%
             \textcolor{red}{4.4} \textbf{Réduire les coûts}\\
-            \textcolor{red}{4.4.1} Minimiser le coût de l'équipement\\
-            \textcolor{red}{4.4.2} Minimiser le coût du déplacement et d'installation}
+            \textcolor{red}{4.4.1} Minimisation des coûts de l'équipement\\
+            \textcolor{red}{4.4.2} Minimisation des coûts de déplacement et d'installation}
         &
-        \makecell{10 \%\\X \%\\X \%}
+        \makecell{10 \%\\5 \%\\5 \%}
         &
         \makecell{%
         \\
-        $\frac{5000 - c}{4200}$ $c \in [800,5000]$\\
+        $\frac{5000 - c}{4200}$ $c \in [800,5000]$ \$\\
         \\}
         &
         &
@@ -86,8 +86,8 @@
         % 4.5
         \makecell[l]{%
             \textcolor{red}{4.5} \textbf{Assurer le développement durable}\\
-            \textcolor{red}{4.5.1} Assurer l'EDI\\
-            \textcolor{red}{4.5.2} Assurer une mesure passive (sans piège)}
+            \textcolor{red}{4.5.1} Garantie de l'EDI\\
+            \textcolor{red}{4.5.2} Garantie d'une mesure passive (sans piège)}
         &
         \makecell{10 \%\\5 \%\\5 \%}
         &
