@@ -178,9 +178,9 @@
       \begin{tabularx}{\textwidth}%
          {|l|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
          \hline
-         \multicolumn{1}{|c|}{\emph{matricule}}
-         & \multicolumn{1}{c|}{\emph{nom}}
-         & \multicolumn{1}{c|}{\emph{r\^ole}}
+         \multicolumn{1}{|c|}{\emph{Matricule}}
+         & \multicolumn{1}{c|}{\emph{Nom}}
+         & \multicolumn{1}{c|}{\emph{Rôle}}
          \\\hline
          \theTableauMembres
       \end{tabularx}\par
@@ -219,7 +219,7 @@
 \def\theTableauMembres{matricule & nom & \\\hline}    % Tableau des membres de l'equipe
 \def\theDateRemise{Date de remise}                    % Date de remise
 \def\theHistoriqueVersions%
-   {version & date & description \\\hline}            % Historique des versions
+   {Version & Date & Description \\ \hline}            % Historique des versions
 
 
 % Definition du niveau hierarchique maximum couvert par la table des matieres
@@ -262,9 +262,9 @@
       \multicolumn{3}{|c|}{\large\rule[-2.25ex]{0ex}{6ex}%
                            \textsf{Historique des versions}}
       \\\hline
-      \multicolumn{1}{|c|}{\emph{version}}
-      & \multicolumn{1}{c|}{\emph{date}}
-      & \multicolumn{1}{c|}{\emph{description}}
+      \multicolumn{1}{|c|}{\emph{Version}}
+      & \multicolumn{1}{c|}{\emph{Date}}
+      & \multicolumn{1}{c|}{\emph{Description}}
       \\\hline
       \theHistoriqueVersions\hline
    \end{tabularx}\par
