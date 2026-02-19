@@ -151,7 +151,7 @@
 % Definitions pour l'inclusion de graphiques
 %    - des repertoires par defaut
 %    - des extensions supportees
-\graphicspath{{./fig/}}
+\graphicspath{{./figures/}}
 
 % Definitions de la page titre
 \renewcommand{\maketitle}{%
