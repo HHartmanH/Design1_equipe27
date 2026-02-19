@@ -52,7 +52,7 @@ transmission et de l’accessibilité des informations depuis la centrale.
 Afin de filmer des vidéos de manière autonome et efficace, il est essentiel que
 le système capte automatiquement l’activité à l’intérieur de la boîte. C’est
 pourquoi une pondération de 11\% est associée à ce sous-objectif. Le barème est
-évalué en fonction du temps écoulé entre chaque capture (t), où la cote
+évalué en fonction du temps écoulé entre chaque capture (\textit{t}), où la cote
 minimale est attribuée à une durée de 60 minutes entre les captures et la cote
 maximale à une durée de zéro minute entre les captures. La valeur maximale de
 60 minutes représente un besoin du client. Le barème est le suivant:
@@ -65,8 +65,8 @@ maximale à une durée de zéro minute entre les captures. La valeur maximale de
 
 Le client exige une autonomie du système d’une durée minimale d’un an. Une
 source d’énergie est donc nécessaire afin d’alimenter le système pendant cette
-période. La pondération associée à ce sous objectif est de 4\%. Le barème est
-évalué en fonction du temps d’autonomie (t), où la cote minimale est attribuée
+période. La pondération associée à ce sous-objectif est de 4\%. Le barème est
+évalué en fonction du temps d’autonomie (\textit{t}), où la cote minimale est attribuée
 à une durée de 12 mois d’autonomie et la cote maximale à une durée de 24 mois
 d’autonomie. La valeur minimale de 12 mois représente un besoin du client. Le
 barème est le suivant:
@@ -88,9 +88,9 @@ essentiel que l’installation du système soit rapide et efficace. Le système
 doit pouvoir être transporté et installé par une équipe de deux personnes. Par
 conséquent, le système ne peut pas être trop lourd ou volumineux. Puisque
 l’installation se fait sur place, le système doit être facile à assembler. La
-pondération attribuée est à discuter plus tard. Le poids maximal est de 70kg et
-le volume désiré est d’environ 1m3. L’évaluation du critère se fera par la
-formule suivante, ou m et v représente la masse et le volume du système :
+pondération attribuée est de 5\%. Le poids maximal est de 70 kg et
+le volume désiré est d’environ 1 $\text{m}^3$. L’évaluation du critère se fera par la
+formule suivante, ou \textit{m} et \textit{v} représentent la masse et le volume du système :
 
 \[
     \frac{v(m - 70)}{50}
@@ -104,7 +104,7 @@ la durée de l’opération est un aspect important du projet. Il est donc
 essentiel de prendre des mesures pour réduire le risque de dysfonctionnement.
 Les différentes composantes électriques et électroniques doivent être bien
 isolées des intempéries, du climat et de la faune qui pourrait endommager le
-système. La pondération attribuée est à discuter plus tard, Si le système
+système. La pondération attribuée est de 15\%. Si le système
 fonctionne sans problème, la note de 1 sera attribuée, 0,5 si un problème
 survient, mais peut être réparé et 0 si la défaillance est impossible à
 réparer.
@@ -125,12 +125,12 @@ Une caméra avec un bon nombre d’image par seconde permet de produire beaucoup
 d’images dans un court laps de temps. Une caméra avec un minimum de 15 ips
 (images par seconde) est nécessaire pour le client.
 
-L’évaluation de ces critères se fera à l’aide de ce barème, où i et p sont
+L’évaluation de ces critères se fera à l’aide de ce barème, où \textit{i} et \textit{p} sont
 respectivement le nombre d’images par seconde et le nombre de pixels total
 arrondi à l’entier supérieur (en millions de pixels):
 
 \[
-    \left( \frac{i - 15}{225} \right) \cdot \left( \frac{p - 1}{7} \right)
+\frac{(i - 15)(p - 1)}{1575}
 \]
 
 La caméra doit avoir un minimum de 720p et 15 ips, en dessous de ceux-ci le
@@ -162,8 +162,8 @@ d’images avec la caméra.
 Afin de maximiser le nombre d’images contenant des animaux de la faune
 arctique, la position de la caméra doit être ajustée de manière à inclure dans
 son champ de vision l’entrée, la sortie et la zone environnante. L’évaluation
-de ce critère repose sur le barème suivant, où f représente la longueur focale
-de la lentille et h’ la hauteur du capteur :
+de ce critère repose sur le barème suivant, où \textit{f} représente la longueur focale
+de la lentille et \textit{h'} la hauteur du capteur :
 
 \[
     \frac{\arctan\!\left(\frac{h'}{2f}\right)}{45}
@@ -171,7 +171,7 @@ de la lentille et h’ la hauteur du capteur :
 
 La fonction arc tangente est utilisée puisque le champ de vision (FOV) dépend
 directement du rapport entre la hauteur de l’image et la longueur focale. Le
-barème correspond ainsi au FOV de la caméra normalisé par le FOV maximal.
+barème correspond ainsi au FOV de la caméra, normalisé par le FOV maximal.
 
 Le champ de vision minimal est fixé à 0 degré et le maximal à 90 degrés, ce qui
 produit une cote variant de 0 à 1. Comme un champ de vision adéquat est
@@ -185,7 +185,7 @@ toutes les dépenses soient essentielles et minimisées, tout en respectant les
 autres critères et en assurant une qualité respectable. Puisque le client
 s’intéresse peu à l’esthétique du projet, seul le matériel essentiel pour le
 fonctionnement du système sera nécessaire. Ainsi, la pondération de ce critère
-est de 20\%.
+est de 10\%.
 
 \subsection{Minimiser le coût de l'équipement}
 
