@@ -57,9 +57,9 @@ minimale est attribuée à une durée de 60 minutes entre les captures et la cot
 maximale à une durée de zéro minute entre les captures. La valeur maximale de
 60 minutes représente un besoin du client. Le barème est le suivant:
 
-\[
-    \frac{60-t}{60}
-\]
+\begin{equation}
+\frac{60 - t}{60}
+\end{equation}
 
 \subsection{Maximiser l'autonomie de la source d'énergie}
 
@@ -71,9 +71,9 @@ période. La pondération associée à ce sous-objectif est de 4\%. Le barème e
 d’autonomie. La valeur minimale de 12 mois représente un besoin du client. Le
 barème est le suivant:
 
-\[
-    \frac{t-12}{12}
-\]
+\begin{equation}
+\frac{t - 12}{12}
+\end{equation}
 
 \section{Être robuste et simple à entretenir}
 
@@ -92,9 +92,9 @@ pondération attribuée est de 5\%. Le poids maximal est de 70 kg et
 le volume désiré est d’environ 1 $\text{m}^3$. L’évaluation du critère se fera par la
 formule suivante, ou \textit{m} et \textit{v} représentent la masse et le volume du système :
 
-\[
-    \frac{v(m - 70)}{50}
-\]
+\begin{equation}
+\frac{v(m - 70)}{50}
+\end{equation}
 
 \subsection{Minimiser les risques de dysfonctionnement}
 
@@ -129,9 +129,9 @@ L’évaluation de ces critères se fera à l’aide de ce barème, où \textit{
 respectivement le nombre d’images par seconde et le nombre de pixels total
 arrondi à l’entier supérieur (en millions de pixels):
 
-\[
+\begin{equation}
 \frac{(i - 15)(p - 1)}{1575}
-\]
+\end{equation}
 
 La caméra doit avoir un minimum de 720p et 15 ips, en dessous de ceux-ci le
 système est considéré comme inacceptable, et un maximum réaliste pour ce projet
@@ -165,9 +165,9 @@ son champ de vision l’entrée, la sortie et la zone environnante. L’évaluat
 de ce critère repose sur le barème suivant, où \textit{f} représente la longueur focale
 de la lentille et \textit{h'} la hauteur du capteur :
 
-\[
-    \frac{\arctan\!\left(\frac{h'}{2f}\right)}{45}
-\]
+\begin{equation}
+\frac{\arctan\!\left(\frac{h'}{2f}\right)}{45}
+\end{equation}
 
 La fonction arc tangente est utilisée puisque le champ de vision (FOV) dépend
 directement du rapport entre la hauteur de l’image et la longueur focale. Le
@@ -201,11 +201,11 @@ solution en fonction de son coût total d’équipement. Le coût total des
 composants est estimé entre 800 et 5000 \$. Ainsi, le barème sera défini comme
 suit :
 
-\[
-    \frac{5000 - c}{4200}
-\]
+\begin{equation}
+\frac{5000 - c}{4200}
+\end{equation}
 
-Où c est le coût de l’équipement utilisé pour le concept.
+Où \textit{c} est le coût de l’équipement utilisé pour le concept.
 
 \subsection{Minimiser le coût du déplacement et de l’installation}
 
