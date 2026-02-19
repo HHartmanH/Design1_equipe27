@@ -1,0 +1,128 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{adjustbox}
+\usepackage{makecell}
+\usepackage{pifont}
+
+\begin{document}
+
+\begin{minipage}{\textwidth}
+    
+
+\vspace{-0.3cm}
+\textbf{Légende :}
+\begin{tabular}{lll}
+\ding{115} & Lien faible  \\
+\ding{108} & Lien moyen  \\
+\ding{72} & Lien fort \\
+\end{tabular}
+\end{minipage}
+\vspace{0.2cm}
+
+\begin{adjustbox}{max height =\textheight}
+\footnotesize
+\renewcommand{\arraystretch}{1}
+\newcommand{\faible}{\ding{115}}
+\newcommand{\moyen}{\ding{108}}
+\newcommand{\fort}{\ding{72}}
+
+\newcolumntype{C}{>{\centering\arraybackslash}m{0.6cm}}
+
+\begin{tabular}{|p{3cm}|p{4.5cm}|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\cline{3-15}
+
+\cline{3-15}
+\multicolumn{2}{c|}{} & \multicolumn{13}{c|}{\textbf{Critères de conception}} \\ \cline{3-15}
+
+\multicolumn{1}{c}{}
+\textbf{Objectifs} 
+& \textbf{ }
+
+& \rotatebox{90}{Maximisation de la prise de données}
+& \rotatebox{90}{Garantie d'une interaction à distance fonctionnelle}
+& \rotatebox{90}{Détection automatique de mouvements}
+& \rotatebox{90}{Maximisation de l'autonomie de la source d'énergie}
+& \rotatebox{90}{Simplification de l'installation du système}
+& \rotatebox{90}{Minimisation des risques de malfonction}
+& \rotatebox{90}{Optimisation de la résolution et du débit d'images de la caméra} 
+& \rotatebox{90}{Éclairage adéquat de la boîte}
+& \rotatebox{90}{Adaptation du champ de vision de la caméra à la boîte}
+& \rotatebox{90}{Minimisation des coûts de l'équipement}
+& \rotatebox{90}{Minimisation des coûts de déplacement et d'installation}
+& \rotatebox{90}{Garantie de l'EDI}
+& \rotatebox{90}{Garantie d'une mesure passive (sans pièges)}\\
+\hline
+
+\multirow{4}{3cm}{Automatiser le système} 
+& Maximiser la prise de données &  \fort   &  &  &  &  &  \fort  &  &  &  &  &  &  &    \\ 
+
+\cline{2-15}
+& Assurer une interaction à distance fonctionnelle &  & \fort  &  & \moyen &  & \faible  &  &  &  &  &  &  &    \\
+\cline{2-15}
+& Détecter automatiquement et efficacement les mouvements de la faune arctique & \moyen  &  & \fort &  &  &  & \faible  &  &  &  &  &  &    \\
+\cline{2-15}
+& Maximiser l'autonomie de la source d'énergie & \moyen  &  &  & \fort  &  &  &  & \faible &  & \faible &  &  &    \\
+\cline{2-15}
+\hline
+
+\multirow{2}{3cm}{Être robuste et simple à entretenir } 
+& Simplifier l'installation du système &  &  &  &  & \fort & \moyen &  &  &  &  &  &  &    \\
+\cline{2-15}
+& Minimiser les risques de malfonctions & \moyen &  &  &  &  & \fort &  &  & \faible & \faible &  &  &    \\
+\hline
+
+\multirow{3}{3cm}{Mesurer des données de qualité} 
+& Optimiser la résolution et de débit d'images de la caméra & \faible  &  & \moyen &  &  &  & \fort & \faible &  &  &  & \faible &    \\
+\cline{2-15}
+& Éclairer adéquatement la boîte &  &  &  &  &  &  &  & \fort &  & \faible &  & \faible  &    \\
+\cline{2-15}
+& Adapter le champ de vision de la caméra à la boîte & \faible  &  &  &  &  &  &  &  & \fort & \faible &  &  &    \\
+\hline
+
+\multirow{2}{3cm}{Réduire les coûts} 
+& Minimiser les coûts de l'équipement &  &  &  &  &  &  &  &  &  & \fort &  &  &    \\
+\cline{2-15}
+& Minimiser le coût du déplacement et de l'installation &  & \faible &  &  &  &  &  &  &  &  & \fort &  &    \\
+\hline
+
+\multirow{2}{3cm}{Assurer le développement durable} 
+& Assurer l'EDI &  &  &  &  &  &  &  &  &  &  &  & \fort &    \\
+\cline{2-15}
+& Assurer une mesure passive (sans pièges) &  &  &  &  &  &  &  &  &  &  &  &  &  \fort  \\
+\hline
+
+
+\multicolumn{2}{c|}{} 
+& \rotatebox{90}{Vidéos de 5 secondes minimum}
+& \rotatebox{90}{Minimum 1 an de fonctionnement autonome}
+& \rotatebox{90}{}
+& \rotatebox{90}{                                    }
+& \rotatebox{90}{                                    }
+& \rotatebox{90}{\makecell[l]{Fonctionne sous deux mètres de neige \\ et dans des températures de $\pm$20° Celsius}}
+& \rotatebox{90}{Minimum 720 p à 15 ips}
+& \rotatebox{90}{}
+& \rotatebox{90}{                                    }
+& \rotatebox{90}{                                    }
+& \rotatebox{90}{}
+& \rotatebox{90}{                                    }
+& \rotatebox{90}{                                    }
+\\
+\cline {3-15}
+
+
+\multicolumn{2}{c|}{} 
+& \multicolumn{13}{c|}{\textbf{Contraintes}} \\
+\cline {3-15}
+
+
+
+
+\end{tabular}
+\end{adjustbox}
+\end{document}
+
+
