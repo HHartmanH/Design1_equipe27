@@ -25,15 +25,17 @@ C’est pourquoi cet objectif a une pondération de 35\%.
 \subsection{Maximiser la prise des données}
 
 L’automatisation du système est essentielle afin de maximiser la collecte des
-données sur l’activité des lemmings. En raison de la région difficilement
+données sur l’activité des lemmings. Il faut maximiser le stockage des données
+pour une période d’au moins un an. En raison de la région difficilement
 accessible et des conditions climatiques extrêmes du Grand Nord, une collecte
 manuelle serait irrégulière, coûteuse et peu fiable. Un système automatisé
 permet d’enregistrer les événements en continu et d’assurer une prise de
 données 24 heures sur 24 tout en limitant les erreurs humaines et en renforçant
 la rigueur scientifique. C’est pourquoi une pondération de 10\% est associée à
-ce sous objectif. Ce critère sera évalué selon la fréquence d’acquisition des
-données et selon la qualité minimale des données récoltées. En fonction de
-l’atteinte de ces deux critères, une note de 0 à 1 sera attribuée.
+ce sous-objectif. Le critère concernant la prise des données sera évalué selon
+la fréquence d’acquisition des données et selon la qualité minimale des données
+récoltées. En fonction de l’atteinte de ces deux critères, une note de 0 à 1
+sera attribuée.
 
 \subsection{Assurer une interaction à distance fonctionnelle}
 
@@ -41,21 +43,22 @@ En raison de l’éloignement géographique du site d’installation, il est
 essentiel que le système permette une interaction à distance fonctionnelle afin
 de consulter l’état du système et d’accéder aux données collectées sans
 intervention sur le terrain. Une pondération de 10\% est associée à ce
-sous-objectif. Une valeur minimale de 0 correspond à une interaction
-inexistante ou non fiable, une valeur de 0,5 à une interaction partielle ou
-intermittente, et une valeur de 1 à une interaction complète, fiable et
-continue. Ce critère sera évalué en fonction de la portée du lien de
-transmission et de l’accessibilité des informations depuis la centrale.
+sous-objectif. Une valeur minimale de 0 correspond à une interaction non
+fiable, une valeur de 0,5 à une interaction partielle ou intermittente, et une
+valeur de 1 à une interaction complète, fiable et continue. Ce critère sera
+évalué en fonction de la portée du lien de transmission et de l’accessibilité
+des informations depuis la centrale.
 
-\subsection{Détecter automatiquement les mouvements}
+\subsection{Assurer une détection automatique des mouvements}
 
 Afin de filmer des vidéos de manière autonome et efficace, il est essentiel que
 le système capte automatiquement l’activité à l’intérieur de la boîte. C’est
 pourquoi une pondération de 11\% est associée à ce sous-objectif. Le barème est
-évalué en fonction du temps écoulé entre chaque capture (\textit{t}), où la
-cote minimale est attribuée à une durée de 60 minutes entre les captures et la
-cote maximale à une durée de zéro minute entre les captures. La valeur maximale
-de 60 minutes représente un besoin du client. Le barème est le suivant:
+évalué en fonction du temps écoulé entre chaque capture (\textit{t} en
+minutes), où la cote minimale est attribuée à une durée de 60 minutes entre les
+captures et la cote maximale à une durée de zéro minute entre les captures. Les
+captures doivent être d’un minimum de cinq secondes. La valeur maximale de 60
+minutes représente un besoin du client. Le barème est le suivant:
 
 \begin{equation}
     \frac{60 - t}{60}
@@ -66,10 +69,10 @@ de 60 minutes représente un besoin du client. Le barème est le suivant:
 Le client exige une autonomie du système d’une durée minimale d’un an. Une
 source d’énergie est donc nécessaire afin d’alimenter le système pendant cette
 période. La pondération associée à ce sous-objectif est de 4\%. Le barème est
-évalué en fonction du temps d’autonomie (\textit{t}), où la cote minimale est
-attribuée à une durée de 12 mois d’autonomie et la cote maximale à une durée de
-24 mois d’autonomie. La valeur minimale de 12 mois représente un besoin du
-client. Le barème est le suivant:
+évalué en fonction du temps d’autonomie (\textit{t} en mois), où la cote
+minimale est attribuée à une durée de 12 mois d’autonomie et la cote maximale à
+une durée de 24 mois d’autonomie. La valeur minimale de 12 mois représente un
+besoin du client. Le barème est le suivant:
 
 \begin{equation}
     \frac{t - 12}{12}
@@ -105,9 +108,12 @@ la durée de l’opération est un aspect important du projet. Il est donc
 essentiel de prendre des mesures pour réduire le risque de dysfonctionnement.
 Les différentes composantes électriques et électroniques doivent être bien
 isolées des intempéries, du climat et de la faune qui pourrait endommager le
-système. La pondération attribuée est de 15\%. Si le système fonctionne sans
-problème, la note de 1 sera attribuée, 0,5 si un problème survient, mais peut
-être réparé et 0 si la défaillance est impossible à réparer.
+système. Le nombre de problèmes et la capacité à les résoudre est donc prise en
+compte. La pondération attribuée est donc de 15\%. Si le système fonctionne
+sans problème, la note de 1 sera attribuée. Si le système compte plusieurs
+défaillances, mais qui sont facilement réparables, la note de 0,5 sera
+attribuée. Si un problème irrésolvable surgit et dérange le bon fonctionnement
+du système, la note de 0 sera attribuée.
 
 \section{Mesurer des données de qualité}
 
@@ -138,7 +144,7 @@ système est considéré comme inacceptable, et un maximum réaliste pour ce pro
 serait une caméra de 4K et 240 ips. Ce critère est très important, donc son
 poids est de 10\%.
 
-\subsection{Éclairer adéquatement la boîte}
+\subsection{Assurer l'éclairage adéquat de la boîte}
 
 Un éclairage adapté à la caméra est nécessaire, car une caméra est inutile sans
 la lumière environnante qui se réfléchit sur l’objet pour être captée par le
@@ -157,13 +163,13 @@ produit une image de très bonne qualité, elle sera cotée à 1,0.
 Ce critère a un poids de 8\%, car sans l’éclairage, nous ne pouvons pas capter
 d’images avec la caméra.
 
-\subsection{Adapter le champ de vision de la caméra à la boîte}
+\subsection{Maximiser le champ de vision de la caméra}
 
 Afin de maximiser le nombre d’images contenant des animaux de la faune
 arctique, la position de la caméra doit être ajustée de manière à inclure dans
 son champ de vision l’entrée, la sortie et la zone environnante. L’évaluation
 de ce critère repose sur le barème suivant, où \textit{f} représente la
-longueur focale de la lentille et \textit{h'} la hauteur du capteur :
+longueur focale de la lentille en mètres et \textit{h'} la hauteur du capteur en mètres :
 
 \begin{equation}
     \frac{\arctan\!\left(\frac{h'}{2f}\right)}{45}
