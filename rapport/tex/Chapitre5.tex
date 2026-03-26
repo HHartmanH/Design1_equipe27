@@ -1,1 +1,749 @@
 \chapter{Conceptualisation et analyse de faisabilité}
+
+\section{Diagramme fonctionnel}
+
+Pour bien structurer le projet et répondre efficacement au mandat, le système
+est décomposé en plusieurs fonctions principales. La figure 5.1 présente le
+diagramme fonctionnel : il illustre précisément comment chaque bloc interagit
+avec les autres par un échange d’intrants et d’extrants.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=6in]{figures/diagramme_fonctionnel.png}
+    \caption{Diagramme fonctionnel.}
+    \label{fig:diagramme-fonctionnel}
+\end{figure}
+
+\section{Conceptualisation des solutions}
+
+\subsection{Enregistrer la faune arctique}
+
+La caméra est le point central du projet. Il nous faut un moyen de filmer la
+faune arctique pour que le client soit en mesure de l’étudier. Les concepts
+étudiés doivent remplir certains critères afin d’être retenus pour une étude
+plus rigoureuse. \\
+
+\noindent
+\textbf{Aspect physique :} La caméra doit avoir un champ de vision adéquat pour filmer la faune arctique. Elle doit aussi résister aux changements de température et toutes interactions avec la faune arctique. La caméra doit filmer avec une performance minimale dont la résolution vidéo est de 720p et doit filmer à 15 images par secondes. De plus, elle doit fonctionner pendant une durée minimale d’un an. \\
+\textbf{Aspect économique :} S/O \\
+\textbf{Aspect temporel :} S/O \\
+\textbf{Aspect socio-environnemental :} S/O \\
+
+\subsubsection{Caméra intérieure Blink Mini 2K\texttt{+}}
+
+\noindent
+\textbf{Description :} Cette caméra a une résolution de 2k, donc à 2560 fois 1440 pixels
+ce qui offre une bonne qualité d’image. La caméra a une fréquence d’image entre
+24 et 25 ips. Le champ de vision total de la caméra est de 138º. Cela permet à
+la caméra de maximiser les chances de filmer la faune arctique. La caméra a
+besoin d’être branchée à une alimentation, et sera donc autonome tant et aussi
+longtemps que le système a de l’énergie. La caméra a besoin du Wi-Fi pour
+interagir avec le système, ainsi qu’interagir avec l’utilisateur. Finalement,
+la température de fonctionnement est entre –20 et 45 ºC. \\
+
+\noindent
+\textbf{Décision :} Retenue \\
+
+\noindent
+\textbf{Justification :} Toutes les spécifications de la caméra répondent aux aspects
+définis. La résolution minimum demandée par le client est de 720p et la
+résolution de cet appareil est de 2k HD, donc la résolution de la caméra est
+plus grande que celle demandée. Un champ de vision de 138º permet de filmer
+efficacement la faune arctique dans la boîte. De plus, la fréquence d’images de
+l’appareil est entre 24 et 25 ips, ce qui est plus élevé que la valeur minimale
+demandée par le client soit 15 ips. Finalement, la température de
+fonctionnement de l’appareil couvre l’entièreté de la variation de température
+prévue dans le Grand Nord qui varie entre -20ºC et 20ºC. \\
+
+\noindent
+\textbf{Références :} \cite{1} \cite{2} \\
+
+\subsubsection{DJI OSMO Action 4 Combo}
+
+\noindent
+\textbf{Description :} Cette caméra filme en 4k HD et 120 ips. Son champ de vision est
+de 155º. La caméra est assez petite et rentrerait facilement dans la boîte.
+Elle utilise le Wi-Fi pour transférer les vidéos. La température de
+fonctionnement de la caméra est entre –20ºC et 45ºC. Les piles que la caméra
+utilise sont des LiPo 1S et elles durent 160 minutes sans charge. Il faudrait
+donc une source d’énergie pour les recharger. Elle est aussi imperméable et
+donc insensible à l’eau. \\
+
+\noindent
+\textbf{Décision :} Retenue \\
+
+\noindent
+\textbf{Justification :} Toutes les spécifications du DJI OSMO action 4 combo répondent
+aux aspects définis. La résolution minimum demandéee par le client est de 720p
+et la résolution de cet appareil est de 4k HD, donc la résolution de la caméra
+est plus grande que celle demandée. Un champ de vision de 155º permet de filmer
+efficacement la faune arctique dans la boîte. De plus, la fréquence d’images de
+l’appareil est de 120 ips ce qui est plus élevé que la valeur minimale demandée
+par le client de 15 ips. Finalement, la température de fonctionnement de
+l’appareil couvre l’entièreté de la variation de température prévue dans le
+Grand Nord soit entre -20ºC et 20ºC. \\
+
+\noindent
+\textbf{Références :} \cite{3} \\
+
+\subsubsection{Sony RX0 II}
+
+\noindent
+\textbf{Description :} Cette caméra a plusieurs modes avec différentes qualités d’images.
+La qualité d’image minimale est une résolution de 1920 par 1080, donc 50M de
+pixels et une fréquence d’images de 240 ips. Son champ de vision est de 84º. La
+température de fonctionnement de cet appareil est entre 0ºC et 45ºC. \\
+
+\noindent
+\textbf{Décision :} Rejetée \\
+
+\noindent
+\textbf{Justification :} Selon le mandat du client, la température varie entre
+-20ºC et 20ºC. La caméra fonctionne seulement entre 0ºC et 45ºC, donc on peut
+conclure que cette caméra ne peut pas résister au climat nordique du Québec.
+Elle n’est pas retenue, car elle ne répond pas à l’aspect physique défini
+précédemment. \\
+
+\noindent
+\textbf{Références :} \cite{4} \\
+
+\input{tableaux/synthese_fonction_1.tex}
+
+\subsection{Éclairer la boîte}
+
+Dépendant du modèle de caméra retenu, le type d’éclairage nécessaire va
+différer. Par exemple, si la boite utilise une caméra infrarouge, une quantité
+moindre de lumière est nécessaire. D’un autre côté, si celle-ci utilise une
+caméra nocturne, il ne faut pas mettre beaucoup de lumière, sinon la visibilité
+sera réduite. Finalement, pour une caméra normale, il faudra une quantité
+suffisante de lumière pour pouvoir observer à l’intérieur de la boîte. De plus,
+il ne faut pas causer de dommages aux lemmings. Effectivement, il est
+recommandé de ne pas excéder une quantité de 325 lux (1950 lumens) d’intensité
+lumineuse, à une distance de 1 m au-dessus du sol. Les petits rongeurs,
+notamment les lemmings, n’ont pas une très bonne vision nocturne et préfèrent
+les endroits sombres. Ainsi, les lumières trop fortes peuvent leur causer du
+stress et même endommager leur rétine. C’est pourquoi, l’ampoule utilisée ne
+devra pas être trop puissante. \\
+
+\noindent
+\textbf{Aspect physique :} L’éclairage doit éclairer
+adéquatement la boîte pour être en mesure de permettre à la caméra de
+receuillir des données de qualité. L’éclairage doit être sécuritaire pour
+éviter de blesser la faune. De plus, l’éclairage doit fonctionner pendant une
+période minimale d’un an. \\
+\textbf{Aspect économique:} S/O \\
+\textbf{Aspect temporel :} S/O \\
+\textbf{Aspect socio-environnemental :} Le système ne doit pas affecter la qualité de vie des
+lemmings et petits rongeurs qui utiliseront la boite. La consommation d’énergie
+doit être la plus minimale possible pour être le plus écologique possible.
+
+\subsubsection{Ampoule chauffante lumière rouge 250W}
+
+\noindent
+\textbf{Description :} Cette ampoule a une puissance de 250W. Celle-ci a aussi une durée
+de vie d’environ 5000 heures. Non seulement produit-elle de la lumière qui est
+rouge, mais elle produit de la chaleur. Le diamètre de cette ampoule est de 5
+po et donc assez grande pour éclairer toute la boite. De plus, elle est peu
+couteuse (11.99\$). Une ampoule comme celle-ci va produire environ 2000 lumens.
+Puisque le maximum que nous pouvons atteindre est d’environ 1950 lumens, il
+serait idéal de mettre un gradateur (dimmer) pour réduire l’intensité
+lumineuse. Ceci serait bien, car cela diminue l’intensité lumineuse sans autant
+plus diminuer la quantité de chaleur qui est émise par l’ampoule. \\
+
+\noindent
+\textbf{Décision :} Retenue, mais \\
+
+\noindent
+\textbf{Justification :} Cette ampoule serait idéale puisqu’elle offre de
+la chaleur et de la lumière. Cependant, sa durée de vie n’est pas assez élevée.
+Effectivement, il faudrait probablement la changer minimalement une fois dans
+l’année. Cela implique que quelqu’un devrait se rendre sur le site pour
+effectuer le changement, ce qui n’est pas idéal. \\
+
+\noindent
+\textbf{Références :} \cite{5} \\
+
+\subsubsection{Ampoule à DEL à faisceau large - 1050 lumens}
+
+\noindent
+\textbf{Description :} Cette ampoule au DEL de 14W est l’équivalent d’une ampoule
+incandescente de 100W. Elle consomme beaucoup moins d’énergie qu’une ampoule
+incandescente normale. Elle produit 1050 lumens et a une lumière de couleur
+chaude. Celle-ci peut avoir jusqu’à 15 000 heures d’utilisation. Elle a un
+diamètre de 4.8 po et est résistante à l’humidité. Son IRC, autrement dit
+comment l’ampoule illumine les véritables couleurs d’un objet, est de 82, ce
+qui est assez bon. Elle coûte 22.30\$ ce qui est peu coûteux. \\
+
+\noindent
+\textbf{Décision :} Retenue \\
+
+\noindent
+\textbf{Justification :} Cette ampoule serait un choix idéal puisqu’elle peut
+fonctionner pendant presque deux ans, sans avoir besoin de la changer. Ceci
+serait idéal, considérant que le système sera dans un endroit éloigné et peu
+accessible. De plus, elle offre une bonne luminosité, qui n’est pas trop forte
+pour les lemmings, mais qui permet quand même de les voir. Son IRC élevé montre
+aussi que c’est un bon choix, puisque le client pourra étudier les lemmings
+davantage. \\
+
+\noindent
+\textbf{Références :} \cite{6} \\
+
+\subsubsection{Ampoule halogène PHILIPS PAR30 75W}
+
+\noindent
+\textbf{Description :} Cette ampoule est une ampoule halogène de 75W. Elle produit
+environ 1070 lumens de luminosité. Puisque c’est une ampoule halogène, elle
+produit une bonne quantité de chaleur en plus de produire de la lumière. Elle a
+une durée de vie d’environ 3000 heures. \\
+
+\noindent
+\textbf{Décision :} Rejetée \\
+
+\noindent
+\textbf{Justification :} Bien que cette ampoule aurait été idéale pour combiner l’aspect lumière et l’aspect
+chaleur qui doit être présent, sa durée de vie n’est pas assez longue. Il
+faudrait remplacer l’ampoule environ 3 fois durant l’année. Ce n’est pas
+l’idéal, car le client veut un système qui fonctionne de manière autonome, sans
+intervention humaine. \\
+
+\noindent
+\textbf{Références :} \cite{7} \\
+
+\input{tableaux/synthese_fonction_2.tex}
+
+\subsection{Alimenter le système}
+
+L’alimentation du système est un concept clé, car sans alimentation, il n’y a
+pas de récolte de données. Il faudra favoriser une source d’énergie fiable,
+économe et efficace. \\
+
+\noindent
+\textbf{Aspect physique :} Le système peut être recouvert de 2
+mètres de neige, 8 mois par année. La source d’énergie utilisée doit donc être
+choisie selon cette contrainte. \\
+\textbf{Aspect économique :} L’alimentation du système
+doit favoriser un temps d’installation court et une masse faible. \\
+\textbf{Aspect temporel :} L’alimentation du système doit être fiable à long terme.
+L’alimentation du système doit pouvoir être installée par deux personnes sans
+compétences en ingénierie. \\
+\textbf{Aspect socio-environnemental :} L’alimentation du
+système doit prendre en compte les aspects de l’EDI et du développement
+durable.
+
+\subsubsection{Panneau solaire JA Solar JAM54D41-445/LB 445W Bifacial TOPCon N-Type}
+
+\noindent
+\textbf{Description :} Ce panneau solaire contient la technologie avancée des cellules
+photovoltaïques de type-N. La durée de vie des porteurs minoritaires des
+plaquettes de silicium de type-N est plus élevée que celle de type-P, ce qui
+augmente le rendement énergétique. Les cellules de type-N ont un rendement
+d’environ 22,28. \\
+
+\noindent
+\textbf{Décision :} Retenue \\
+
+\noindent
+\textbf{Justification :} Le panneau solaire JA Solar
+TopCon est retenu, car ses cellules ont de très bonnes performances à basse
+luminosité, ce qui est un point essentiel puisque le cycle jour-nuit en
+Arctique est plus court. De plus, leur capacité d’adaptation environnementale
+excellente est un aspect clé, car le système affrontera des températures
+pouvant varier entre -20/+20 degrés Celsius. Pour continuer, 445 Watts
+d’énergie solaire seraient assez pour alimenter toutes les composantes de notre
+système et son coût est abordable. En bref, sa masse est assez faible pour être
+transportée facilement et sa hauteur diminue le risque de recouvrement par la
+neige. Cependant, il serait préférable de le mettre sur un support pour qu’il
+soit placé davantage en hauteur. Référence :\%. De plus, la production
+d’énergie par Watt sur l’ensemble du cycle de vie des cellules solaires TopCon
+est d’environ 3 à 4 \% supérieur à celle des cellules solaires de type-P (PERC).
+Finalement, les cellules photovoltaïques de type-N ont de très bonne performance à basse luminosité et ont une capacité d’adaptation environnementale excellente. Le prix d’un de ces panneaux est d’environ 249 \$, il peut produire jusqu’à 445W, il a une masse de 22kg et une dimension de 176,2 cm x 113,4 cm x 3,0 cm. \\
+
+\noindent
+\textbf{Références :} \cite{8} \cite{9} \cite{10} \\
+
+\subsubsection{Kit d'éolienne à 5 feuilles Vevor 400W 12V}
+
+\noindent
+\textbf{Description :} Cette éolienne verticale est parfaite pour la production
+d’électricité en région isolée. Son design à axe vertical lui permet de capter
+le vent peu importe sa direction, ce qui simplifie son fonctionnement par
+rapport à une éolienne à axe horizontal. Ses pales en fibre de nylon sont à la
+fois légères, résistantes à la corrosion et conçues pour offrir une bonne
+solidité mécanique. L’éolienne nécessite seulement une brise d’environ 2m/s
+pour démarrer, ce qui constitue un avantage dans les environnements où le vent
+est variable ce qui lui permet de produire jusqu’à 400W de puissance. De plus,
+elle peut fonctionner dans une plage de température d’environ -40 °C à 80 °C,
+ce qui montre une bonne adaptation aux conditions climatiques difficiles.
+Finalement, ce modèle est compact avec une hauteur de 60cm, une longueur de
+90cm et son poids de 12.35kg. Le prix de cette éolienne est de 208,99\$. \\
+
+\noindent
+\textbf{Décision :} Retenue \\
+
+\noindent
+\textbf{Justification :} L’éolienne verticale Vevor 400 W est retenue, car elle peut
+produire de l’électricité même lorsque le vent est faible, ce qui est un
+avantage important pour assurer l’alimentation du système en région isolée. De
+plus, son design à axe vertical lui permet de capter le vent peu importe sa
+direction, ce qui simplifie son fonctionnement et évite d’avoir à l’orienter
+continuellement. Sa capacité d’adaptation environnementale est également un
+aspect clé, puisqu’elle peut fonctionner dans une plage de température de -20
+°C à 20 °C, ce qui lui permet de résister aux conditions climatiques difficiles
+auxquelles le système pourrait être exposé. Pour continuer, une puissance
+allant jusqu’à 400 W serait suffisante pour contribuer à alimenter les
+différentes composantes du système, tout en demeurant une solution abordable
+avec un coût d’environ 208,99\$. En bref, sa masse de 12,35 kg est assez faible
+pour faciliter son transport et son installation, et son format compact de 60
+cm de hauteur par 90 cm de longueur respecte bien la contrainte d’un système de
+petite taille. Finalement, comme l’éolienne est installée en hauteur sur un
+support, cela diminue aussi le risque qu’elle soit recouverte par la neige. De
+plus, les matériaux qui la composent lui permettent d’être silencieuse et de
+générer très peu de vibrations, ce qui contribue à ne pas perturber la faune
+environnante. \\
+
+\noindent
+\textbf{Référence :} \cite{30} \cite{31} \\
+
+\subsubsection{K-Tor Pocket Socket USB 1AMP}
+
+\noindent
+\textbf{Description :} Cette éolienne verticale est parfaite pour la production
+d’électricité en région isolée. Son design à axe vertical lui permet de capter
+le vent peu importe sa direction, ce qui simplifie son fonctionnement par
+rapport à une éolienne à axe horizontal. Ses pales en fibre de nylon sont à la
+fois légères, résistantes à la corrosion et conçues pour offrir une bonne
+solidité mécanique. L’éolienne nécessite seulement une brise d’environ 2m/s
+pour démarrer, ce qui constitue un avantage dans les environnements où le vent
+est variable ce qui lui permet de produire jusqu’à 400W de puissance. De plus,
+elle peut fonctionner dans une plage de température d’environ -40 °C à 80 °C,
+ce qui montre une bonne adaptation aux conditions climatiques difficiles.
+Finalement, ce modèle est compact avec une hauteur de 60cm, une longueur de
+90cm et son poids de 12.35kg. Le prix de cette éolienne est de 208,99\$. \\
+
+\noindent
+\textbf{Décision :} Non retenue \\
+
+\noindent
+\textbf{Justification :} L’éolienne verticale Vevor 400 W est retenue, car elle peut
+produire de l’électricité même lorsque le vent est faible, ce qui est un
+avantage important pour assurer l’alimentation du système en région isolée. De
+plus, son design à axe vertical lui permet de capter le vent peu importe sa
+direction, ce qui simplifie son fonctionnement et évite d’avoir à l’orienter
+continuellement. Sa capacité d’adaptation environnementale est également un
+aspect clé, puisqu’elle peut fonctionner dans une plage de température de -20
+°C à 20 °C, ce qui lui permet de résister aux conditions climatiques difficiles
+auxquelles le système pourrait être exposé. Pour continuer, une puissance
+allant jusqu’à 400 W serait suffisante pour contribuer à alimenter les
+différentes composantes du système, tout en demeurant une solution abordable
+avec un coût d’environ 208,99 \$. En bref, sa masse de 12,35 kg est assez
+faible pour faciliter son transport et son installation, et son format compact
+de 60 cm de hauteur par 90 cm de longueur respecte bien la contrainte d’un
+système de petite taille. Finalement, comme l’éolienne est installée en hauteur
+sur un support, cela diminue aussi le risque qu’elle soit recouverte par la
+neige. De plus, les matériaux qui la composent lui permettent d’être
+silencieuse et de générer très peu de vibrations, ce qui contribue à ne pas
+perturber la faune environnante. \\
+
+\noindent
+\textbf{Référence :} \cite{32} \cite{33} \\
+
+\input{tableaux/synthese_fonction_3.tex}
+
+\subsection{Détecter les dysfonctionnements}
+
+Afin d'assurer la pérennité du système dans des conditions climatiques
+extrêmes, des mécanismes seront mis en place pour détecter les
+dysfonctionnements ou les bris de composants responsables de la capture et de
+la transmission des vidéos à la centrale. Celle-ci recevra l'état du système
+sous forme d'alarmes à l'aide de ces mécanismes. \\
+
+\noindent
+\textbf{Aspect physique :} Le système
+doit détecter tous les dysfonctionnements de composantes et générer des
+alarmes. \\
+\textbf{Aspect économique :} S/O \\
+\textbf{Aspect temporel :} Le système doit détecter les
+dysfonctionnements en temps réel. De plus, le système doit être installé par
+deux personnes sans compétence en ingénierie. \\
+\textbf{Aspect socio-environnemental:} S/O
+
+\subsubsection{Librairie OpenCV}
+
+\noindent
+\textbf{Description :} OpenCV est une librairie de traitement d’images. Elle a été
+initialement développée par Intel et est maintenant Open Source. Cette
+librairie offre plusieurs fonctionnalités, telles que la conversion de niveaux
+de gris, la détection de flou ou la comparaison d'images. Ces fonctionnalités
+peuvent être utilisées pour détecter des dysfonctionnements, comme des
+problèmes d’exposition ou une perte de frames. \\
+
+\noindent
+\textbf{Décision :} Rejetée \\
+
+\noindent
+\textbf{Justification :} OpenCV permet de détecter des dysfonctionnements seulement à partir des
+images de la caméra. Cependant, si la centrale ne reçoit plus de vidéo. Il est
+impossible de déterminer quelle composante est à l’origine du problème et de
+générer les alarmes appropriées. OpenCV peut seulement diagnostiquer des
+problèmes avec la caméra ou l’éclairage. \\
+
+\noindent
+\textbf{Références :} \\
+
+\subsubsection{Arduino Nano avec capteur de courant ACS712}
+
+\noindent
+\textbf{Description :} Le capteur de courant ACS712 mesure l'intensité du courant en le
+convertissant en un signal de tension. Il peut être utilisé à des fins de
+surveillance de systèmes électriques et peut alerter en cas de surcharge ou de
+court-circuit. L'Arduino Nano est un microcontrôleur de petite taille alimenté
+par une tension de 5 volts disposant de plusieurs broches d'entrée et de
+sortie. Il permet de lire le capteur , d'analyser et de déclencher une
+réaction. \\
+
+\noindent
+\textbf{Décision :} Retenue \\
+
+\noindent
+\textbf{Justification :} Un Arduino Nano combiné à des
+capteurs de courant ACS712 permet de détecter les composantes qui ne
+fonctionnent plus en surveillant leur consommation électrique. Une absence ou
+une variation anormale de courant peut indiquer un état de bris ou de
+dysfonctionnement. Cet état peut ensuite être utilisé par le microcontrôleur
+pour générer une alarme. \\
+
+\noindent
+\textbf{Références :} \cite{27} \\
+
+\subsubsection{Logiciel Heartbeat}
+
+\noindent
+\textbf{Description :} Heartbeat est un logiciel permettant de surveiller différentes
+composantes en leur envoyant périodiquement un “ping” pour vérifier leur
+fonctionnement. Chaque composante envoie régulièrement un signal indiquant
+qu’il fonctionne correctement. Si ce signale n’arrive pas dans les temps
+définis, le composant est considéré comme défaillante. \\
+
+\noindent
+\textbf{Décision :} Retenue mais \\
+
+\noindent
+\textbf{Justification :} Ce concept permet de surveiller les composantes du système avec
+un minimum de matériel supplémentaire. Les composants capables de générer un
+signal sont surveillés directement par le logiciel, tandis que les autres comme
+une ampoule peut être suivis via un capteur comme le ACS712. De plus, le
+logiciel peut être installé sur un ordinateur embarqué dans le boîtier tel
+qu'un Raspberry Pi, afin de surveiller l’ensemble des composants et déclencher
+les alarmes. \\
+
+\noindent
+\textbf{Références :} \\
+
+\input{tableaux/synthese_fonction_4.tex}
+
+\subsection{Transmettre les vidéos}
+
+Un système capable de transmettre l’état du système, les images et vidéos
+récolté est une fonction importante pour le projet, afin de rester à jour sur
+les événements qui se produisent. Cela permettrait de vérifier en temps réel le
+bon déroulement de l’expérience et d’avoir de la redarduondance dans le
+stockage des vidéos. \\
+
+\noindent
+\textbf{Aspect physique :} Due à la contrainte du volume, le système
+de transmission doit être suffisamment compact pour rentrer à l’intérieur du
+compartiment dédié aux systèmes électroniques. Il doit aussi être fonctionnel
+sous 2 mètres de neige et permettre la transmission de données dans une région
+arctique isolée. \\
+\textbf{Aspect économique :} S/O \\
+\textbf{Aspect temporel :} Il est attendu que le
+système de transmission des images/vidéos puisse fonctionner pendant
+l’entièreté de la prise de données et ce pendant l’hiver comme l’été. Le
+système ne doit pas être trop complexe à installer. Une équipe de deux
+personnes doit être en mesure d’installer le système sans avoir de formation en
+ingénierie. \\
+\textbf{Aspect socio-économique :} S/O
+
+\subsubsection{Raspberry Pi 4 avec un modem satellite Swarm M138}
+
+\noindent
+\textbf{Description :} Le Raspberry Pi 4 est un nano-ordinateur de très petite taille
+avec 2 GB de ram et une carte graphique H.264. Il agit comme unité de contrôle
+principale coordonnant toutes les composantes du boîtier. Il permet de stocker
+temporairement les vidéos, de les compresser et de les envoyer vers le modem
+satellite. Le Swarm M138 est un modem à faible coût permettant de recevoir des
+données et de les envoyer à des satellites incluant dans des régions polaires
+bien au-delà de la portée de réseau Wi-Fi et cellulaire. Il vient avec un
+forfait de 60 \$ USD par année pour 750 paquets de 192 octets par moi. \\
+
+\noindent
+\textbf{Décision :} Retenu \\
+
+\noindent
+\textbf{Justification :} Le modem Swarm M138 permet de transmettre des
+données dans des régions arctiques. La bande passante est suffisante pour
+transmettre des alertes, des résumés de capteurs ou et le nombre
+d’événements vidéos. \\
+
+\noindent
+\textbf{Références :} \cite{25} \cite{26} \\
+
+\subsubsection{Starlink}
+
+\noindent
+\textbf{Description :} Starlink Standard est un système de réseau satellites en orbite basse. Ce système a été développé par une entreprise privée pour fournir un accès internet haut débit partout dans le monde y compris les zones isolées. C’est un système destiné pour le grand public il est donc simple d’utilisation.
+Ce service fonctionne à l’aide d’un terminal Starlink et d’un abonnement mensuel. Le forfait “Roam Résidentiel” serait adapté aux besoins du système. Le forfait coute 70\$ par mois et offre 100Go de données.
+Starlink Standard est compatible avec des encodeurs vidéo standard comme H.264 ou H.265. Le système peut recevoir de 50 à 250 Mbps et émettre 10 à 40 Mbps. \\
+
+\noindent
+\textbf{Décision :} Retenu, mais \\
+
+\noindent
+\textbf{Justification :} C’est un système simple à utiliser. ll ne serait pas nécessaire de coder le système ou de fabriquer une antenne. Tout le système est déjà assemblé et est préparé pour l’utilisateur. Tout le nécessaire est inclus à l’achat d’un système.
+Le système Starlink est également très puissant. Il peut émettre un grand débit de données, largement supérieur à ce qui serait demandé d’une vidéo de 720p à 15 images seconds.
+L’antenne externe peut faire fondre la neige à un rythme de 40mm par heure et peut fonctionner dans des températures de –30°C à 50°C.
+Cepoendant, l’antenne est sensible aux conditions météorologiques, il serait donc nécessaire de prendre en considération cet enjeu lors de l’installation,
+Le système Starlink est également plus énergivore et nécessite une alimentation stable de 75W à 100W.
+Starlink est également plus volumineux qu’un système construit sur mesure, mais il devrait tout de même rentrer dans le compartiment. \\
+
+\noindent
+\textbf{Références :} \cite{28} \cite{29} \\
+
+\subsubsection{Raspberry Pi 4 avec le service Iridium Certus 700}
+
+\noindent
+\textbf{Description :} Intellian C700 est un terminal conçu pour le service Iridium Certus
+700. Il combine une antenne et un modem, offrant un débit de 352kbps en
+émission. Il fonctionne sous une tension d’alimentation de 12 à 24V et consomme
+40 à 50W en transmission. Iridium Certus 700 est un service de communication
+par satellite fourni pas Iridium Communications. Il est parti la classe de
+service le plus haut débit de la gamme Certus. Il est conçu pour des
+applications nécessitant une connectivité mondiale et résiliente. \\
+
+\noindent
+\textbf{Décision :} Retenu \\
+
+\noindent
+\textbf{Justification :} L’Iridium Certus 700 garantit une connectivité dans les
+régions arctiques et offre une bande passante élevée permettant de transmettre
+des vidéos de bonne résolution vers un système de stockage externe. De plus, il
+peut fonctionner dans des environnements extrêmes. \\
+
+\noindent
+\textbf{Références :} \\
+
+\input{tableaux/synthese_fonction_5.tex}
+
+\subsection{Présenter l'information à l'utilisateur}
+
+Les images/vidéos recueillies par le système, ainsi que l’état général de
+celui-ci, doivent être accessibles de manière claire, intuitive et sécurisée
+pour les utilisateurs autorisés. Étant donné l’éloignement géographique du site
+d’installation et la nécessité de minimiser les interventions humaines, il est
+nécessaire de disposer d’une interface permettant de consulter à distance
+l’état du système, le nombre d’événements enregistrés et les informations
+essentielles au fonctionnement du dispositif. Le système doit permettre l’accès
+à une console locale à la centrale, puis à une application mobile ou une
+interface équivalente, tout en garantissant un accès sécurisé pour trois
+utilisateurs. \\
+
+\noindent
+\textbf{Aspect physique :} Sur le plan physique, l’accès à distance doit
+être minimalement possible depuis au moins un appareil mobile compatible avec
+les besoins des trois utilisateurs autorisés. \\
+\textbf{Aspect économique :} Sur le plan
+économique, le développement ou le maintien de l’interface à distance ne doit
+entraîner aucun coût supplémentaire pour le système autonome sur le terrain et
+doit rester à un prix abordable. \\
+\textbf{Aspect temporel :} Sur le plan temporel, toute
+solution doit pouvoir être développée, intégrée et testée dans les délais
+impartis au projet. \\
+\textbf{Aspect socio-économique :} Sur le plan socio-économique,
+l’interface doit être simple d’utilisation, accessible aux trois utilisateurs
+autorisés et ne pas augmenter la charge de travail à la centrale.
+
+\subsubsection{Tableau de bord web avec Power BI}
+
+\noindent
+\textbf{Description :} Power BI permet de créer un tableau de bord web permettant de
+présenter l’information reçue du système autonome. Le tableau de bord est
+hébergé dans le Power BI Service et accessible localement à la centrale via un
+simple navigateur web (console locale), à distance sur le web, de manière
+sécurisée pour les trois utilisateurs autorisés. Le tableau de bord affiche
+l’état du système, les événements détectés, les images/vidéos reçues, les
+alertes et l’historique des transmissions. Power BI se connecte automatiquement
+aux données stockées à la centrale (fichier, base de données ou API interne) et
+met à jour l’interface sans intervention manuelle. \\
+
+\noindent
+\textbf{Décision :} Retenue \\
+
+\noindent
+\textbf{Justification :} Power BI permet de centraliser l’état du système, les
+événements détectés et les images/vidéos transmises dans une interface claire,
+intuitive et accessible aussi bien localement à la centrale que de manière
+sécurisée à distance pour les trois utilisateurs autorisés. Sa capacité à se
+connecter automatiquement aux données stockées sur le site, sans intervention
+humaine, en fait une solution parfaitement adaptée à un système autonome en
+région éloignée. De plus, Power BI évite tout développement logiciel sur mesure
+et ne nécessite aucune infrastructure supplémentaire, ce qui limite les coûts à
+des licences abordables (jusqu’à \$24 US par mois (33,22 \$ CAD en date du 26
+mars 2026) pour le plan Premium Per User). \\
+
+\noindent
+\textbf{Références :} \cite{12} \cite{13} \cite{14} \cite{15} \\
+
+\subsubsection{Application mobile dédiée}
+
+\noindent
+\textbf{Description :} Une application mobile dédiée consisterait à développer une
+application native (Android/iOS) permettant aux trois utilisateurs autorisés
+d’accéder à distance aux informations du système autonome. L’application
+offrirait une interface personnalisée affichant l’état du système, les
+événements détectés, les images et vidéos reçues, ainsi que les alertes et
+l’historique des transmissions. Elle intégrerait un mécanisme
+d’authentification sécurisé, une synchronisation automatique avec les données
+stockées à la centrale et des notifications push pour informer les utilisateurs
+en temps réel. Le développement nécessiterait la création d’une API externe ou
+d’un service de communication entre la centrale et l’application, ainsi que la
+maintenance continue de l’application sur les plateformes mobiles. \\
+
+\noindent
+\textbf{Décision :} Rejetée \\
+
+\noindent
+\textbf{Justification :} Bien qu’une application mobile dédiée offrirait une
+interface personnalisée et potentiellement très ergonomique, cette solution
+n’est pas retenue en raison de ses coûts de développement, de déploiement et de
+maintenance, qui dépassent les contraintes économiques du projet. La création
+d’une application native nécessite une expertise spécialisée, la mise en place
+d’une API sécurisée, ainsi que des mises à jour régulières pour assurer la
+compatibilité avec les systèmes Android et iOS, ce qui augmente
+significativement la charge de travail et les coûts récurrents. \\
+
+\noindent
+\textbf{Références :} \cite{16} \cite{17} \cite{18} \cite{19} \\
+
+\subsubsection{Application Jump Desktop}
+
+\noindent
+\textbf{Description :} Jump Desktop est une application de prise de contrôle à distance
+permettant d’accéder directement à un ordinateur ou à une console locale via
+une connexion sécurisée. Dans le cadre du système autonome, Jump Desktop
+offrirait aux trois utilisateurs autorisés la possibilité d’ouvrir à distance
+l’interface locale de la centrale comme s’ils étaient physiquement sur place.
+L’application est compatible avec les appareils mobiles, tablettes et
+ordinateurs, et utilise des protocoles sécurisés (RDP, VNC ou Fluid Remote
+Desktop) pour établir la connexion. Cette solution permettrait d’accéder à
+l’ensemble des données et outils déjà présents à la centrale, incluant les
+images/vidéos, les journaux d’événements, l’état du système et les fichiers
+internes, sans nécessitée de développement d’interface supplémentaire. \\
+
+\noindent
+\textbf{Décision :} Retenue, mais \\
+
+\noindent
+\textbf{Justification :} Jump Desktop permet un accès direct, sécurisé
+et complet à la console locale de la centrale, répondant ainsi à l’exigence
+d’une consultation à distance des informations essentielles du système.
+L’application ne nécessite aucun développement logiciel, aucune API externe et
+aucune maintenance additionnelle. Seuls les frais mensuels de l’application
+entrent en compte. De plus, son installation rapide et sa compatibilité avec
+les appareils mobiles permettent de respecter les délais impartis. Bien que
+l’interface ne soit pas spécifiquement optimisée pour la visualisation
+simplifiée des données, elle offre une flexibilité maximale en donnant accès à
+l’environnement complet de la centrale, ce qui peut s’avérer utile pour le
+diagnostic ou la résolution d’incidents. \\
+
+\noindent
+\textbf{Références :} \cite{20} \cite{21} \\
+
+\input{tableaux/synthese_fonction_6.tex}
+
+\subsection{Stocker les vidéos}
+
+Le stockage et l’enregistrement des données est une fonction essentielle du
+système. Sans enregistrement, il est impossible d’étudier et éventuellement
+analyser les données. Trouver une méthode d’enregistrement fiable et robuste
+est un critère important du système. \\
+
+\noindent
+\textbf{Aspect physique :} Le système doit
+permettre une capacité de stockage d'au moins 64 GB, préférablement 128 GB. Le
+système doit être en mesure de fonctionner correctement et être fiable pour une
+période d'un an à de très basses températures (jusqu'à -20℃). \\
+\textbf{Aspect économique :} S/O \\
+\textbf{Aspect temporel :} S/O \\
+\textbf{Aspect socio-environnemental :} S/O
+
+\subsubsection{SanDisk MAX ENDURANCE microSD Card - 128GB}
+
+\noindent
+\textbf{Description :} La carte microSD MAX ENDURANCE 128 GB de SanDisk est conçue pour
+pouvoir enregistrer des vidéos continuellement sur une durée de 6 ans. Ensuite,
+celle-ci peut être réutilisée pour plusieurs autres années. Sa température de
+fonctionnement spécifiée est de -25 ℃ à 85 ℃ et elle est résistante à l'eau et
+aux chocs. \\
+
+\noindent
+\textbf{Décision :} Retenue \\
+
+\noindent
+\textbf{Justification :} La carte microSD MAX ENDURANCE 128
+GB de SanDisk est retenue, car elle respecte la capacité de stockage nécessaire
+de 128 GB. D’autant plus, elle est durable (garantie de 6 ans d'enregistrements
+continus par le fournisseur), sa température de fonctionnement entre dans la
+plage de températures du site d'enregistrement, soit entre -20 ℃ et 20 ℃, et
+elle est résistante aux intempéries. \\
+
+\noindent
+\textbf{Références :} \cite{22} \cite{23} \\
+
+\subsubsection{Stockage infonuagique avec AWS S3}
+
+\noindent
+\textbf{Description :} Le service de stockage infonuagique S3 offert par Amazon permet
+d'archiver des données de manière durable et fiable, avec aucune limite de
+stockage. Les données du système et les vidéos peuvent être transmises
+continuellement si le système est connecté à l'internet. Cependant, il faut
+également un petit stockage local pour que la caméra puisse enregistrer les
+vidéos correctement avec une connexion internet intermittente. Puisque les
+vidéos ne seront pas stockées localement, elles peuvent être récupérées
+n'importe où, même si cela n'est pas une exigence du client. \\
+
+\noindent
+\textbf{Décision :} Retenue \\
+
+\noindent
+\textbf{Justification :} Ce système peut fonctionner seulement si le système a une
+connexion internet et que celle-ci peux supporter l'envoi continu de vidéos. Un
+ordinateur central, comme un Raspberry Pi, serait nécessaire pour l’envoi de
+vidéos. De plus, il faudrait également un petit stockage local, ce qui diminue
+l'avantage de ce concept. \\
+
+\noindent
+\textbf{Références :} \cite{34} \\
+
+\subsubsection{SSD industriel Kingston - 128GB}
+
+\noindent
+\textbf{Description :} La gamme de SSD industriel de Kingston est conçue spécifiquement
+pour les environnements extérieurs et des températures entre -40℃ et +85℃. Le
+modèle OTCS1S3128Q-B00 est un disque SSD SATA III de 2,5 po ayant une capacité
+de stockage de 128 GB. \\
+
+\noindent
+\textbf{Décision :} Retenue \\
+
+\noindent
+\textbf{Justification :} Le disque SSD industriel Kingston répond à tous nos besoins, car il peut fonctionner aux
+températures du site -20℃ et +20℃ et a une capacité suffisante. Toutefois, il
+peut ajouter de la complexité au système, car une caméra a besoin d’un
+microordinateur, comme un Raspberry Pi, pour pouvoir enregistrer directement
+sur un disque SSD. \\
+
+\noindent
+\textbf{Références :} \cite{24} \\
+
+\input{tableaux/synthese_fonction_7.tex}
