@@ -9,10 +9,10 @@ objectifs et les sous-objectifs. \\
 \input{tableaux/synthese_cahier_des_charges.tex}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{figures/maison_de_la_qualite.png}
-    \caption{Maison de la qualité.}
-    \label{fig:maison_de_la_qualite}
+  \centering
+  \includegraphics[width=1\textwidth]{figures/maison_de_la_qualite.png}
+  \caption{Maison de la qualité.}
+  \label{fig:maison_de_la_qualite}
 \end{figure}
 
 \section{Automatiser le système}
@@ -24,18 +24,20 @@ C’est pourquoi cet objectif a une pondération de 35\%.
 
 \subsection{Maximiser la prise des données}
 
-L’automatisation du système est essentielle afin de maximiser la collecte des
-données sur l’activité des lemmings. Il faut maximiser le stockage des données
-pour une période d’au moins un an. En raison de la région difficilement
-accessible et des conditions climatiques extrêmes du Grand Nord, une collecte
-manuelle serait irrégulière, coûteuse et peu fiable. Un système automatisé
-permet d’enregistrer les événements en continu et d’assurer une prise de
+Il est essentiel de maximiser la collecte des données sur l’activité des lemmings.
+En raison de la région difficilement accessible et des conditions climatiques
+extrêmes du Grand Nord, une collecte manuelle serait irrégulière, coûteuse et peu fiable.
+Un système automatisé permet d’enregistrer les événements en continu et d’assurer une prise de
 données 24 heures sur 24 tout en limitant les erreurs humaines et en renforçant
-la rigueur scientifique. C’est pourquoi une pondération de 10\% est associée à
-ce sous-objectif. Le critère concernant la prise des données sera évalué selon
-la fréquence d’acquisition des données et selon la qualité minimale des données
-récoltées. En fonction de l’atteinte de ces deux critères, une note de 0 à 1
-sera attribuée.
+la rigueur scientifique. Il est donc impératif de maximiser l'espace de stockage pour une période d’un an. C’est pourquoi une pondération de 10\% est associée à ce sous-objectif.
+Le critère est évalué selon le barème Min-Max suivant :
+
+\begin{equation}
+  \frac{C_i - C_{min}}{C_{\text{idéale}} - C_{min}}
+\end{equation}
+
+\noindent
+Où $C_i$ est la capacité du moyen de stockage, $C_{min}$ est la plus petite capacité de stockage convenable et $C_{\text{idéale}}$ est la capacité idéale.
 
 \subsection{Assurer une interaction à distance fonctionnelle}
 
@@ -46,8 +48,8 @@ intervention sur le terrain. Une pondération de 10\% est associée à ce
 sous-objectif. Une valeur minimale de 0 correspond à une interaction non
 fiable, une valeur de 0,5 à une interaction partielle ou intermittente, et une
 valeur de 1 à une interaction complète, fiable et continue. Ce critère sera
-évalué en fonction de la portée du lien de transmission et de l’accessibilité
-des informations depuis la centrale.
+évalué en fonction de la portée du lien de transmission, de l’accessibilité
+des informations depuis l'application mobile et de la convivialité de l'interface.
 
 \subsection{Assurer une détection automatique des mouvements}
 
@@ -61,7 +63,7 @@ captures doivent être d’un minimum de cinq secondes. La valeur maximale de 60
 minutes représente un besoin du client. Le barème est le suivant:
 
 \begin{equation}
-    \frac{60 - t}{60}
+  \frac{60 - t}{60}
 \end{equation}
 
 \subsection{Maximiser l'autonomie de la source d'énergie}
@@ -75,7 +77,7 @@ une durée de 24 mois d’autonomie. La valeur minimale de 12 mois représente u
 besoin du client. Le barème est le suivant:
 
 \begin{equation}
-    \frac{t - 12}{12}
+  \frac{t - 12}{12}
 \end{equation}
 
 \section{Être robuste et simple à entretenir}
@@ -97,10 +99,10 @@ formule suivante, ou \textit{m} et \textit{v} représentent la masse et le
 volume du système :
 
 \begin{equation}
-    \frac{v(m - 70)}{50}
+  \frac{v(m - 70)}{50}
 \end{equation}
 
-\subsection{Minimiser les risques de dysfonctionnement}
+\subsection{Minimiser les risques de dysfonctionnement} % À modifier
 
 Le système doit pouvoir opérer automatiquement sans entretien régulier.
 S’assurer que les composantes électriques et électroniques fonctionnent pendant
@@ -136,7 +138,7 @@ L’évaluation de ces critères se fera à l’aide de ce barème, où \textit{
 pixels total arrondi à l’entier supérieur (en millions de pixels):
 
 \begin{equation}
-    \frac{(i - 15)(p - 1)}{1575}
+  \frac{(i - 15)(p - 1)}{1575}
 \end{equation}
 
 La caméra doit avoir un minimum de 720p et 15 ips, en dessous de ceux-ci le
@@ -172,7 +174,7 @@ de ce critère repose sur le barème suivant, où \textit{f} représente la
 longueur focale de la lentille en mètres et \textit{h'} la hauteur du capteur en mètres :
 
 \begin{equation}
-    \frac{\arctan\!\left(\frac{h'}{2f}\right)}{45}
+  \frac{\arctan\!\left(\frac{h'}{2f}\right)}{45}
 \end{equation}
 
 La fonction arc tangente est utilisée puisque le champ de vision (FOV) dépend
@@ -208,7 +210,7 @@ composants est estimé entre 800 et 5000 \$. Ainsi, le barème sera défini comm
 suit :
 
 \begin{equation}
-    \frac{5000 - c}{4200}
+  \frac{5000 - c}{4200}
 \end{equation}
 
 Où \textit{c} est le coût de l’équipement utilisé pour le concept.

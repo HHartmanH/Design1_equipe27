@@ -10,7 +10,7 @@
 % Chargement des packages supplémentaires (si absent de la classe)
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[french]{babel} 
+\usepackage[french]{babel}
 \usepackage[autolanguage]{numprint}
 \usepackage{icomma}
 \usepackage{enumitem}
@@ -20,20 +20,34 @@
 \usepackage{float}
 \usepackage{array}
 \usepackage{multirow}
+\usepackage{longtable}
+\usepackage{tabularx}
+
+% Réglages globaux pour limiter les avertissements typographiques
+\AtBeginDocument{
+  \sloppy
+  \setlength{\emergencystretch}{3em}
+  \setlength{\hfuzz}{100pt}
+  \hbadness=100000
+  \vfuzz=100pt
+  \vbadness=100000
+}
 
 % Meilleur espacement entre les lignes dans les tableaux
 \renewcommand{\cellset}{\renewcommand{\arraystretch}{1.3}}
 
 % Définition d'une commande pour présenter des cellules multilignes dans un tableau
-\newcommand{\cellulemultiligne}[1]{\begin{tabular}{@{}c@{}}#1\end{tabular}}
+\newcommand{\cellulemultiligne}[1]{
+  \begin{tabular}{@{}c@{}}#1
+\end{tabular}}
 
 % Définition de colonnes en mode paragraphe avec alignement ajustable
 % Cette définition requiert le chargement du package "array"
-%  - alignement horizontal, paramètre #1 : 
+%  - alignement horizontal, paramètre #1 :
 %     - \raggedright (aligné à gauche)
 %     - \centering (centre)
 %     - \raggedleft (aligné à droite)
-%  - alignement vertical, paramètre #2 : 
+%  - alignement vertical, paramètre #2 :
 %     - p (aligné en haut)
 %     - m (centre)
 %     - b (aligné en bas)
@@ -43,32 +57,32 @@
 
 % Définitions des paramètres de la page titre
 \TitreProjet{Grand Nord : Système autonome fixe pour l'échantillonnage de la faune arctique} % Titre du projet
-\TitreRapport{Rapport de projet -- version 2} % Titre du rapport
+\TitreRapport{Rapport de projet -- version finale} % Titre du rapport
 \Destinataire{Robert Bergevin, Luc Lamontagne et Simon Thibault} % Nom(s) du destinataire
 \NumeroEquipe{27} % Numéro de l'équipe
 \NomEquipe{NordiQc} % Nom de l'équipe
 \TableauMembres{% % Tableau des membres de l'équipe
-   537\,201\,790   & Tristan Gourrand        & Vérification du rapport \\ \hline
-   537\,390\,129   & Isaac Corriveau         & Organisation \\ \hline
-   537\,380\,856   & Samia Hins              & Procès-verbaux \\ \hline
-   537\,130\,575   & Armand Lecomte          & Direction \\ \hline
-   537\,387\,624   & Yoan Lévesque           & Production du rapport \\ \hline
-   537\,354\,173   & Hugo Vachon-Veronneau   & Planification \\ \hline
-   537\,376\,833   & Arianne Poulin          & Ordre du jour \\ \hline
-   537\,389\,801   & Emeric Guimond          & Remise des livrables \\ \hline
+  537\,201\,790   & Tristan Gourrand        & Vérification du rapport \\ \hline
+  537\,390\,129   & Isaac Corriveau         & Organisation \\ \hline
+  537\,380\,856   & Samia Hins              & Procès-verbaux \\ \hline
+  537\,130\,575   & Armand Lecomte          & Direction \\ \hline
+  537\,387\,624   & Yoan Lévesque           & Production du rapport \\ \hline
+  537\,354\,173   & Hugo Vachon-Veronneau   & Planification \\ \hline
+  537\,376\,833   & Arianne Poulin          & Ordre du jour \\ \hline
+  537\,389\,801   & Emeric Guimond          & Remise des livrables \\ \hline
 }
-\DateRemise{26 mars 2026} % Date de remise
+\DateRemise{23 avril 2026} % Date de remise
 
 
 % Contenu de l'historique des versions
 \HistoriqueVersions{% % Version & Date & Description \\ \hline
-       & 22 janvier 2026 & Création du document \\ \hline
-   0   & 23 janvier 2026 & Ajout de l'introduction et de la description \\ \hline
-   0   & 29 janvier 2026 & Correction de l'introduction et de la description \\ \hline
-   1   & 18 février 2026 & Ajout des chapitres 3 et 4 \\ \hline
-   1   & 19 février 2026 & Correction des chapitres 3 et 4 \\ \hline
-   2   & 19 mars 2026 & Correction du rapport (version 1) et ajout du chapitre 5 \\ \hline
-   2   & 26 mars 2026 & Correction du chapitre 5 et du rapport (version 2) \\ \hline
+  &   22 janvier 2026 & Création du document \\ \hline
+  0   & 23 janvier 2026 & Ajout de l'introduction et de la description \\ \hline
+  0   & 29 janvier 2026 & Correction de l'introduction et de la description \\ \hline
+  1   & 18 février 2026 & Ajout des chapitres 3 et 4 \\ \hline
+  1   & 19 février 2026 & Correction des chapitres 3 et 4 \\ \hline
+  2   & 19 mars 2026 & Correction du rapport (version 1) et ajout du chapitre 5 \\ \hline
+  2   & 26 mars 2026 & Correction du chapitre 5 et du rapport (version 2) \\ \hline
 }
 
 %--------------------------------------------------------------------------------------
@@ -77,13 +91,16 @@
 
 \begin{document}
 
-%   Chapitres
+% Chapitres
 \input{tex/Chapitre1}
 \input{tex/Chapitre2}
 \input{tex/Chapitre3}
 \input{tex/Chapitre4}
 \input{tex/Chapitre5}
+\input{tex/Chapitre6}
+\input{tex/Chapitre7}
 
+% Bibliographie
 \input{tex/bibliographie.tex}
 
 % Annexes

@@ -1,0 +1,30 @@
+% Colonne centrée dans tabularx
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+
+\begin{table}[H]
+  \centering
+  \caption{Les trois concepts pour le projet NordiQC}
+  \begin{tabularx}{\textwidth}{|X|C|C|C|}
+    \hline
+    \textbf{Fonctions} & \textbf{Concept 1} & \textbf{Concept 2} & \textbf{Concept 3} \\
+    \hline
+
+    \textcolor{red}{5.2.1} Enregistrer la faune arctique & Blink Mini & DJI OSMO & Sony RX0 II \\
+    \hline
+    \textcolor{red}{5.2.2} Éclairer la boîte & Ampoule chauffante & Ampoule à DEL & Ampoule PHILIPS \\
+    \hline
+    \textcolor{red}{5.2.3} Alimenter le système & Panneau solaire & Kit d'éolienne & USB LAMP \\
+    \hline
+    \textcolor{red}{5.2.4} Détecter les disfonctionnements & OpenCV & Arduino Nano & HeartBeat \\
+    \hline
+    \textcolor{red}{5.2.5} Transmettre les vidéos & Modem satellite & Starlink & Iridium Certus 700 \\
+    \hline
+    \textcolor{red}{5.2.6} Présenter l'information à l'utilisateur & Power BI & Application mobile dédiée & Jump Desktop \\
+    \hline
+    \textcolor{red}{5.2.7} Stocker les vidéos & SanDisk MAX ENDURANCE & AWS S3 & SSD Kingston \\
+    \hline
+  \end{tabularx}
+\end{table}

@@ -1,0 +1,46 @@
+Chapitre 4 :
+
+- Corriger 4.2.2 (Emeric)
+
+Chapitre 5 :
+
+Diagramme fonctionnel :
+- Intrant - commandes de l'utilisateur ?
+- Intrant - conditions environnementales ?
+- Fonction - Protéger le système ?
+- Fonction - Présenter l'information à l'utilisateur (accéder localement ou à distance) ?
+- Fonction : Enregistrer la faune arctique (détecter + capturer vidéos ou deux fonctions distinctes) ?
+
+Analyse de faisabilité :
+- Vérifier les cotes
+- Vérifier 5.2.2 -> Rejet non voulu ?
+- Vérifier 5.2.3.3, 5.2.6.2 -> Rejet temporel et/ou temporel sans contrainte numérique, la justification ne permet pas de comprendre
+- Vérifier rejets économiques sans contrainte de coût
+- Vérifier 5.2.7.- 6 GB -> Donner les calculs ?
+- S'assurer d'estimer les coûts des concepts !
+
+Formatage :
+- Page titre : 5 noms de rôles erronés ??
+- Plusieurs paragraphes trop longs (loi de Miller)
+- Quelques tableaux dépassent dans la marge
+- Référence: % ???
+- Ponctuation...
+
+Description des concepts et autre :
+- Concept d'éclairage, mais pas de concept de boîte (Pour régler le problème : ajouter "conditions environnementales" en intrant de la fonction "Protéger le système".) Faire une nouvelle fonction ???
+- Gérer les dysfonctionnements : Plateforme sans logiciel, logiciel sans plateforme, ces concepts sont imprécis.
+- Logiciel sans plateforme (Présenter l'information à l'utilisateur)
+- Détection des lemmings : La caméra qui le fait... ??
+- Quelques références vers produits discontinués (ex. éolienne, transmetteur satellite)
+- Vérifier les références manquantes !
+
+Chapitre 6 :
+
+- Finaliser le plan de développement
+- Choisir les trois concepts sur lesquels nous choisissons les composantes utilisées afin de faire le tableau 6.2 comme dans l'exemple de rapport commenté. Ces trois concepts sont décris au point 6.2 du chapitre 6.
+Robert mentionne : Ne pas construire les concepts sur la base d'une seule caractéristique, ce qui tend à optimiser un seul critère ou groupe de critères aux dépens des autres (allant ainsi à l'encontre de la méthodologie et de son utilisation d'un cahier des charges élaboré).
+
+Note par rapport au point 6.2 : Sous chaque concept, nous devons regarder chaque point du cahier des charges (chapitre 4) et y associer une composante choisie.
+Par exemple, nous avons la contrainte Maximisation de l'autonomie de la source d'énergie sous l'objectif Automatiser le système. Admettons que le premier concept choisi est Économique. Nous devrions décrire sous cette contrainte au point 6.2 la source d'énergie la moins coûteuse (un des 3 concepts de la fonction Alimenter le système) et évaluer cette source d'énergie avec la procédure que nous avons fait dans le plan de développement pour cette contrainte...
+
+Là est le problème : Si chaque contrainte se voit associer une composante du système, quelle contrainte s'occupe du stockage et de parler des 3 composantes de la fonction 5.2.7 ? Devons-nous ajouter un nouveau sous-objectif au cahier des charges ? Modifier Maximiser la prise des données afin de parler du stockage ? Dire que maximiser la prise des données = avoir un stockage suffisant et performant ? Cela nous permettrait de le rendre quantifiable ?
